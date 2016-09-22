@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>iOS集成极光推送 | Hexo</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/component.css" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <meta name="generator" content="Hexo">
+  <script src="http://static.duoshuo.com/embed.js"></script>
+  
+  
+  
+
+  
+
+</head>
+<body>
+<div class="container">
+    <div class="mp-pusher" id="mp-pusher">
+        <i id="scroll-up" class="fa fa-angle-up"></i>
+        <nav id="mp-menu" class="mp-menu">
+            <div class="mp-level">
+                <a data-pjax class="back-home" style="font-size: 20px" href="/"><h2 ><i class="fa fa-home"></i>
+                        Home</h2></a>
+                <ul class="first-level">
+                    <li>
+                        <a class="fa fa-archive" href="#"><i class="fa fa-angle-left">
+                            </i>&nbsp;&nbsp;Archive</a>
+                        <div class="mp-level page-list">
+                            <h2 ><i class="fa fa-archive"></i>
+                                Archive</h2>
+                            <a class="mp-back" href="#">back</a>
+                            <form id="search-form" action="">
+                                <input type="text" class="search search-archive" placeholder="Search.."/>
+                            </form>
+                            <ul>
+                                <div class="mp-scroll">
+                                
+                                <li class="search-archive-li mp-pjax">
+                                    <a href="/2016/09/22/HTML5基础介绍/">HTML5基础介绍</a>
+                                </li>
+                                
+                                <li class="search-archive-li mp-pjax">
+                                    <a href="/2016/09/22/iOS集成极光推送/">iOS集成极光推送</a>
+                                </li>
+                                
+                                <li class="search-archive-li mp-pjax">
+                                    <a href="/2016/09/22/Runtime基本介绍/">Runtime基本介绍</a>
+                                </li>
+                                
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fa fa-copy" href="#"><i class="fa fa-angle-left">
+                            </i>&nbsp;&nbsp;Categories</a>
+
+                        <div class="mp-level page-list">
+                            <h2 ><i class="fa fa-copy"></i>
+                                Categories</h2>
+                            <a class="mp-back" href="#">back</a>
+                            <form id="search-form" action="">
+                                <input type="text" class="search search-category" placeholder="Search.."/>
+                            </form>
+                            <ul>
+                                <div class="mp-scroll">
+                                
+                                <li class="search-category-li mp-pjax">
+                                    <a href="/categories/iOS/">&nbsp;&nbsp;&nbsp;iOS</a>
+                                    <small>2</small>
+                                </li>
+                                
+                                <li class="search-category-li mp-pjax">
+                                    <a href="/categories/web前端/">&nbsp;&nbsp;&nbsp;web前端</a>
+                                    <small>1</small>
+                                </li>
+                                
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fa fa-tags" href="#"><i class="fa fa-angle-left">
+                            </i>&nbsp;&nbsp;Tags</a>
+                        <div class="mp-level page-list">
+                            <h2 ><i class="fa fa-tags"></i>
+                                Tags</h2>
+                            <a class="mp-back" href="#">back</a>
+                            <form id="search-form" action="">
+                                <input type="text" class="search search-tag" placeholder="Search.."/>
+                            </form>
+                            <ul>
+                                <div class="mp-scroll">
+                                
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="mp-pjax"><a class="fa fa-user" href="/about">&nbsp;&nbsp;&nbsp;About me</a></li>
+                    <li><a class="fa fa-github" href="#">&nbsp;&nbsp;&nbsp;Github</a></li>
+
+                </ul>
+
+            </div>
+        </nav>
+        <div id="pjax">
+            <div class="pjax-hidden" style="display: none">
+                
+                    <a  data-pjax href="/2016/09/22/HTML5基础介绍/">HTML5基础介绍</a>
+                
+                    <a  data-pjax href="/2016/09/22/iOS集成极光推送/">iOS集成极光推送</a>
+                
+                    <a  data-pjax href="/2016/09/22/Runtime基本介绍/">Runtime基本介绍</a>
+                
+                
+                    <a data-pjax href="/categories/iOS/">&nbsp;&nbsp;iOS</a>
+                
+                    <a data-pjax href="/categories/web前端/">&nbsp;&nbsp;web前端</a>
+                
+                
+                <a data-pjax class="fa fa-user" href="/about">&nbsp;&nbsp;&nbsp;About me</a>
+            </div>
+            <nav class="nexus">
+                <li  style="border-left: 1px solid #c6d0da;">
+                    <a id="trigger" href="#"><i class="fa fa-bars"></i></a>
+                </li>
+                <li ><a id="nexus-back" data-pjax href="/">Hexo</a></li>
+                
+            </nav>
+
+            <div class="scroller">
+            <div class="scroller-inner">
+
+
+<!-- -->
+<!--<body class="post-template">-->
+<!---->
+  
+
+<main class="content" role="main">
+    <article class="post" >
+    <span class="post-meta">
+                  <div class="tag-tile">
+                      
+                  </div>
+                <h1 class="post-title" style="margin: 14px 0;color:#50585D">iOS集成极光推送</h1>
+
+                    <div class="post-meta">
+                        Post on<span class="fa fa-clock-o"></span>
+                        <time datetime="2016-09-22T08:07:29.000Z"
+                              itemprop="datePublished">2016-09-22</time>
+                    </div>
+    </span>
+
+        <section class="post-content">
+            <ol>
+<li><strong>我们先来生成调试环境下的调试证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-ac8aa55032575a04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>这时候要生成一个本地的CSR文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-66a06b3e06e759a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>从系统的钥匙串app生成一个CSR文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-89d0068cef709bc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a96b003a50810b7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>下载调试证书到本地,保存好</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-01bb64de88319035.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>添加调试app的设备</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5d8df82381846096.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-e28a32af38b95745.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
+<li><strong>如何查看你的设备的UDID</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a6d5da7ec84cab42.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-05884f0bc1c8575d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
+</li>
+<li><strong>添加你的APP ID</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4c53901400a0f1bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>填写你的app信息</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-dc28e339f19ceb7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>一定要勾选推送通知</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-73aecf99e2bf91d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>回到最上面创建推送证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9147b7ade9b86b82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>选择生成推送证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-711ebba3bc8d20a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5ee33846c65b5f43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-d6feb459f4b14043.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-2d899d06bcf371ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>生成描述文件,匹配你的app,调试设备,和电脑</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-24bff54fa810a178.png" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9402c619bc969546.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-98bcbe3aa533d76c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-f82b08294a9156bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-bcb2f2c64570a3da.png" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-c628a8b6c41aa014.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-7ff1549ee15b493f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>双击运行调试证书 推送证书 和描述文件, 看起来没反应,事实上它们已经分别添加到你的钥匙串和Xcode里面了</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-24375789727396e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
+<li><strong>如果提示签发者无效有两种解决办法</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4c3b404c1c90dd0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><strong>如果是你的worldWide Developer过期 分别在左侧登陆和系统中把过期的证书删除,然后重新下载一个新的证书导入即可</strong><br><strong>传送门</strong><br><a href="https://developer.apple.com/certificationauthority/AppleWWDRCA.cer" target="_blank" rel="external">https://developer.apple.com/certificationauthority/AppleWWDRCA.cer</a><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9f9e8a188b015246.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>另一种方法是更改权限</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-04f6e1fa8176931f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-1157d5fe0a2af9ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-0162c71ab35e8e6d.png" alt=""></li>
+</ul>
+</li>
+<li><strong>导出p12文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-61c314e977074784.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4459fdb237a6f52d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>来到极光官网创建集成app</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-460858f1bf184ed6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>上传成功之后会自动生成AppKey</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5adb7b2261db9e04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>创建工程, 用cocoaPods集成极光推送</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-47f232c2b2e0baf7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>根据官网iOS集成指南集成极光推送</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-c85267ccc9f134d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>真机调试的时候选择相应账户进行测试</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9d13b87fb016b066.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
+<li><strong>记得替换刚才自动生成的appkey</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-894437f8b7c02abd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
+</li>
+<li><strong>添加测试证书和生产证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-fd5a118b2b842cef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>运行, 打印日志中没有报错, 并且显示<code>upload device token success</code>的时候,就代表集成成功了</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-3b28c6acbf8248cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>在极光平台进行推送测试</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-60f82c46dc3d3dd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>测试推送消息成功,基本的集成完毕</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a7e27ea7f7f7b46c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ol>
+
+        </section>
+        <hr/>
+        <nav class="pagination" style="width:auto" role="pagination">
+            
+            <a data-pjax class="newer-posts" href="/2016/09/22/HTML5基础介绍/">← Prev Post</a>
+            
+            <a class="share-button" data-original-title title>Share this Post</a>
+            
+            <a data-pjax class="older-posts" href="/2016/09/22/Runtime基本介绍/">Next Post →</a>
+            
+        </nav>
+        <br/>
+        <br/>
+        <section id="comment">
+            <div id="comment-box"></div>
+        </section>
+
+
+    </article>
+</main>
+
+
+  
+<footer class="site-footer">
+    
+    <div class="inner">
+        <section class="copyright"><a href="/"></a> &copy; Hexo 2014</section>
+        <section class="poweredby">Published with <a target="_blank" href="http://hexo.io/">Hexo   </a> and Theme by <a target="_blank" href="https://github.com/yuche/hexo-theme-kael">Kael</a></section>
+    </div>
+</footer>
+</div>
+</div><!-- /scroller -->
+
+</div><!-- /pusher -->
+</div><!-- /container -->
+</div>
+
+<!-- Easter eggs -->
+
+<div class="egg animated">
+    <a id="close-button" href="#">X</a>
+    <div class="block">
+        <div class="loading">
+            <span class="ball1"></span>
+            <span class="ball2"></span>
+        </div>
+    </div>
+</div>
+  
+<script src="//cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>
+<script>
+    if (!window.jQuery) {
+        var script = document.createElement('script');
+        script.src = "/js/jquery.min.js";
+        document.body.appendChild(script);
+    }
+</script>
+<script type="text/javascript" src="/js/lib.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+
+
+<link rel="stylesheet" href="/modules/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/modules/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    (function($){
+
+        var wrapAll = function(q) {
+            $(q).each( function() {
+                var $img = $(this),
+                        href = $img.attr('src');
+                $img.wrap('<a rel="fancybox" href="' + href + '" title="' + $img.attr('alt') + '" class="link"></a>');
+            });
+        };
+
+        wrapAll('.post-content img');
+        wrapAll('.post-excerpt img');
+        $('[rel="fancybox"]').fancybox();
+    })(jQuery);
+</script>
+
+
+
+</body>
+</html>
