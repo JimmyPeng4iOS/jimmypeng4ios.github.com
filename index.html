@@ -175,7 +175,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -185,7 +185,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -238,6 +238,280 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/22/iOS集成极光推送/" itemprop="url">
+                  iOS集成极光推送
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-09-22T16:07:29+08:00" content="2016-09-22">
+              2016-09-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><strong>我们先来生成调试环境下的调试证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-ac8aa55032575a04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>这时候要生成一个本地的CSR文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-66a06b3e06e759a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>从系统的钥匙串app生成一个CSR文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-89d0068cef709bc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a96b003a50810b7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>下载调试证书到本地,保存好</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-01bb64de88319035.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>添加调试app的设备</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5d8df82381846096.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-e28a32af38b95745.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
+<li><strong>如何查看你的设备的UDID</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a6d5da7ec84cab42.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-05884f0bc1c8575d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
+</li>
+<li><strong>添加你的APP ID</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4c53901400a0f1bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>填写你的app信息</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-dc28e339f19ceb7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>一定要勾选推送通知</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-73aecf99e2bf91d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>回到最上面创建推送证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9147b7ade9b86b82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>选择生成推送证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-711ebba3bc8d20a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5ee33846c65b5f43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-d6feb459f4b14043.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-2d899d06bcf371ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>生成描述文件,匹配你的app,调试设备,和电脑</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-24bff54fa810a178.png" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9402c619bc969546.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-98bcbe3aa533d76c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-f82b08294a9156bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-bcb2f2c64570a3da.png" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-c628a8b6c41aa014.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-7ff1549ee15b493f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>双击运行调试证书 推送证书 和描述文件, 看起来没反应,事实上它们已经分别添加到你的钥匙串和Xcode里面了</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-24375789727396e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
+<li><strong>如果提示签发者无效有两种解决办法</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4c3b404c1c90dd0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><strong>如果是你的worldWide Developer过期 分别在左侧登陆和系统中把过期的证书删除,然后重新下载一个新的证书导入即可</strong><br><strong>传送门</strong><br><a href="https://developer.apple.com/certificationauthority/AppleWWDRCA.cer" target="_blank" rel="external">https://developer.apple.com/certificationauthority/AppleWWDRCA.cer</a><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9f9e8a188b015246.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>另一种方法是更改权限</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-04f6e1fa8176931f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-1157d5fe0a2af9ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-0162c71ab35e8e6d.png" alt=""></li>
+</ul>
+</li>
+<li><strong>导出p12文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-61c314e977074784.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4459fdb237a6f52d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>来到极光官网创建集成app</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-460858f1bf184ed6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>上传成功之后会自动生成AppKey</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5adb7b2261db9e04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>创建工程, 用cocoaPods集成极光推送</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-47f232c2b2e0baf7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>根据官网iOS集成指南集成极光推送</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-c85267ccc9f134d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>真机调试的时候选择相应账户进行测试</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9d13b87fb016b066.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
+<li><strong>记得替换刚才自动生成的appkey</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-894437f8b7c02abd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
+</li>
+<li><strong>添加测试证书和生产证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-fd5a118b2b842cef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>运行, 打印日志中没有报错, 并且显示<code>upload device token success</code>的时候,就代表集成成功了</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-3b28c6acbf8248cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>在极光平台进行推送测试</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-60f82c46dc3d3dd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>测试推送消息成功,基本的集成完毕</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a7e27ea7f7f7b46c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/22/Runtime基本介绍/" itemprop="url">
+                  Runtime基本介绍
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-09-22T16:07:29+08:00" content="2016-09-22">
+              2016-09-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><code>Objective-C</code>语言是一门动态语言，它将很多静态语言在编译和链接时期做的事放到了运行时来处理。这种动态语言的优势在于：我们写代码时更具灵活性，如我们可以把消息转发给我们想要的对象，或者随意交换一个方法的实现等。</p>
+<p>这种特性意味着<code>Objective-C</code>不仅需要一个编译器，还需要一个运行时系统来执行编译的代码。对于<code>Objective-C</code>来说，这个运行时系统就像一个操作系统一样：它让所有的工作可以正常的运行。这个运行时系统即Objc <code>Runtime</code>。Objc <code>Runtime</code>其实是一个<code>Runtime</code>库，它基本上是用C和汇编写的，这个库使得C语言有了面向对象的能力。</p>
+<p><strong>Runtime库主要做下面几件事：</strong><br><strong>封装</strong>：在这个库中，对象可以用C语言中的结构体表示，而方法可以用C函数来实现，另外再加上了一些额外的特性。这些结构体和函数被<code>runtime</code>函数封装后，我们就可以在程序运行时创建，检查，修改类、对象和它们的方法了。</p>
+<p><strong>找出方法的最终执行代码</strong>：当程序执行<code>[object doSomething]</code>时，会向消息接收者(object)发送一条消息(doSomething)，<code>runtime</code>会根据消息接收者是否能响应该消息而做出不同的反应。</p>
+<p>###基本解释</p>
+<ul>
+<li>Runtime 是一套比较底层的纯C语言API, 它是OC的幕后工作者</li>
+<li>我们平时写的OC代码在运行时都会编译器转为runtime的C语言代码</li>
+<li>其中最主要的是消息机制OC的函数调用成为消息发送 属于动态调用过程 在编译的时候并不能决定真正调用哪个函数</li>
+<li>事实证明, 在编译阶段，OC可以调用任何函数，即使这个函数并未实现，只要申明过就不会报错</li>
+<li>而C语言在编译阶段就会报错 只有在真正运行的时候才会根据函数的名称找到对应的函数来调用。</li>
+</ul>
+<p>##实际用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div></pre></td><td class="code"><pre><div class="line">#import &quot;ViewController.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line">#import &lt;objc/message.h&gt;</div><div class="line">#import &quot;Person.h&quot;</div><div class="line">#import &quot;NSObject+my.h&quot;</div><div class="line"></div><div class="line"></div><div class="line">@interface ViewController ()</div><div class="line">@property (weak, nonatomic) IBOutlet UIImageView *phoneImg;</div><div class="line"></div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@implementation ViewController</div><div class="line"></div><div class="line">- (void)viewDidLoad &#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    </div><div class="line">    /******************1.消息发送*******************/</div><div class="line">    </div><div class="line">    Person *p = [Person new];</div><div class="line">//    [p run];</div><div class="line">    objc_msgSend(p,@selector(run));</div><div class="line">    </div><div class="line">    objc_msgSend([Person class], @selector(run));</div><div class="line"></div><div class="line">    /******************2.方法交换*******************/</div><div class="line">    self.phoneImg.image = [UIImage imageNamed:@&quot;banner&quot;];</div><div class="line">    </div><div class="line">    /******************3.获取实例变量*******************/</div><div class="line">    </div><div class="line">    //参数1:你要获取的类,参数2:数量指针</div><div class="line">    </div><div class="line">    unsigned int iVarCount;</div><div class="line">    </div><div class="line">    Ivar *iVarList = class_copyIvarList([Person class], &amp;iVarCount);</div><div class="line">    </div><div class="line">    for (int i = 0; i &lt; iVarCount; i++) &#123;</div><div class="line">        </div><div class="line">        Ivar aVar = iVarList[i];</div><div class="line">        </div><div class="line">        NSLog(@&quot;%s&quot;,ivar_getName(aVar));</div><div class="line">    &#125;</div><div class="line">    /******************4.获取对象方法*******************/</div><div class="line">    unsigned int methodCount;</div><div class="line">    </div><div class="line">    Method *methodList = class_copyMethodList([Person class], &amp;methodCount);</div><div class="line">    </div><div class="line">    for (int i = 0; i &lt; methodCount; i++) &#123;</div><div class="line">        </div><div class="line">        Method aMethod = methodList[i];</div><div class="line">        </div><div class="line">        SEL methodSel = method_getName(aMethod);</div><div class="line">        </div><div class="line">        NSLog(@&quot;%@&quot;,NSStringFromSelector(methodSel));</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************5.动态创建类,添加实例变量*******************/</div><div class="line">    </div><div class="line">    //创建一个类 参数1:父类 参数2:你要创建的类名 参数3:</div><div class="line">     Class MyClass = objc_allocateClassPair([Person class], &quot;MyClass&quot;, 0);</div><div class="line">    </div><div class="line">    </div><div class="line">    //添加实例变量  参数1:要往哪个类添加, 参数2:变量名 参数3:变量大小 参数4:对齐方式-传0 参数5:类型编码(要去文档查看)</div><div class="line">    </div><div class="line">    </div><div class="line">    if (class_addIvar(MyClass, &quot;_city&quot;, sizeof(NSString *), 0, &quot;@&quot;)) &#123;</div><div class="line">        NSLog(@&quot;变量添加成功&quot;);</div><div class="line">        </div><div class="line">        </div><div class="line">        id myP = [[MyClass alloc]init];//使用id类型来接收</div><div class="line">        </div><div class="line">        //赋值</div><div class="line">        [myP setValue:@&quot;广州&quot; forKey:@&quot;_city&quot;];</div><div class="line">        </div><div class="line">        //取出</div><div class="line">        NSLog(@&quot;%@&quot;,[myP valueForKey:@&quot;_city&quot;]);</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************6.动态创建类,添加对象方法*******************/</div><div class="line">    </div><div class="line">    //添加对象方法  参数1:要往哪个类添加, 参数2:方法选择器 参数3:实现 参数4:实现的函数类型编码(要去文档查看)</div><div class="line">    </div><div class="line">    if (class_addMethod(MyClass, @selector(aMethod:), (IMP)aMethod_IMP, &quot;v@:@&quot;)) &#123;</div><div class="line">        </div><div class="line">        NSLog(@&quot;方法添加成功&quot;);</div><div class="line">        </div><div class="line">        id myP = [[MyClass alloc]init];//使用id类型来接收</div><div class="line">        </div><div class="line">        [myP aMethod:@&quot;哈哈&quot;];</div><div class="line">        </div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************7.分类添加属性*******************/</div><div class="line">    </div><div class="line">    NSObject *obj = [NSObject new];</div><div class="line"></div><div class="line">    obj.myName = @&quot;aNema&quot;;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%@&quot;,obj.myName);</div><div class="line">    </div><div class="line">    </div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">//方法实现</div><div class="line">void aMethod_IMP(id self,SEL _cmd,NSString * str)&#123;</div><div class="line"></div><div class="line">    NSLog(@&quot;%s = %@&quot;,__func__,str);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">//OC里的方法</div><div class="line">- (void)aMethod:(NSString *)str&#123;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%s&quot;,__func__);</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
+<p>###UIImage分类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">//</div><div class="line">//  UIImage+my.m</div><div class="line">//  01-runtime</div><div class="line">//</div><div class="line">//  Created by iOS on 15/12/24.</div><div class="line">//  Copyright © 2015年 iOS. All rights reserved.</div><div class="line">//</div><div class="line"></div><div class="line">#import &quot;UIImage+my.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line"></div><div class="line">@implementation UIImage (my)</div><div class="line"></div><div class="line">+ (void)load&#123;</div><div class="line">    </div><div class="line">    //1.获取旧方法</div><div class="line">    </div><div class="line">    Method imageNameM = class_getClassMethod(self, @selector(imageNamed:));</div><div class="line">    </div><div class="line">    //2.获取新方法</div><div class="line">    Method imageWithNameM = class_getClassMethod(self, @selector(imageWithName:));</div><div class="line">    </div><div class="line">    //3.交换</div><div class="line">    </div><div class="line">    method_exchangeImplementations(imageNameM, imageWithNameM);</div><div class="line">    </div><div class="line">    </div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//+ (UIImage *)imageNamed:(NSString *)name&#123;</div><div class="line">//    </div><div class="line">//&#125;</div><div class="line"></div><div class="line"></div><div class="line">+ (UIImage *)imageWithName:(NSString *)name&#123;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%s&quot;,__func__);</div><div class="line">    </div><div class="line">    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) &#123;</div><div class="line">        </div><div class="line">        name = [name stringByAppendingString:@&quot;_iPad&quot;];</div><div class="line">        </div><div class="line">    &#125;else &#123;</div><div class="line">        name = [name stringByAppendingString:@&quot;_iPhone&quot;];</div><div class="line">    &#125;</div><div class="line">    </div><div class="line"></div><div class="line">    return [self imageWithName:name];</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure></p>
+<p>###NSObject分类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">//</div><div class="line">//  NSObject+my.m</div><div class="line">//  01-runtime</div><div class="line">//</div><div class="line">//  Created by iOS on 15/12/24.</div><div class="line">//  Copyright © 2015年 iOS. All rights reserved.</div><div class="line">//</div><div class="line"></div><div class="line">#import &quot;NSObject+my.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line"></div><div class="line">@implementation NSObject (my)</div><div class="line"></div><div class="line">static const void *myNameKey = &quot;myNameKey&quot;;</div><div class="line"></div><div class="line">- (void)setMyName:(NSString *)myName&#123;</div><div class="line">    </div><div class="line">//    [self setValue:myName forKey:@&quot;myName&quot;];</div><div class="line">    </div><div class="line">    //设置关联  参数1:要关联的对象 参数2:绑定的key 参数3:这个key要关联的值 参数4:要使用的策略</div><div class="line">    objc_setAssociatedObject(self, myNameKey, myName, OBJC_ASSOCIATION_COPY_NONATOMIC);</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line">- (NSString *)myName&#123;</div><div class="line">    </div><div class="line">//    return [self valueForKey:@&quot;myName&quot;];</div><div class="line">    return objc_getAssociatedObject(self, myNameKey);</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/22/HTML5基础介绍/" itemprop="url">
                   HTML5基础介绍
                 </a>
@@ -251,7 +525,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-09-22T16:07:29+08:00" content="2016-09-22">
               2016-09-22
             </time>
@@ -263,7 +537,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">in</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/web前端/" itemprop="url" rel="index">
@@ -560,280 +834,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/22/Runtime基本介绍/" itemprop="url">
-                  Runtime基本介绍
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-22T16:07:29+08:00" content="2016-09-22">
-              2016-09-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><code>Objective-C</code>语言是一门动态语言，它将很多静态语言在编译和链接时期做的事放到了运行时来处理。这种动态语言的优势在于：我们写代码时更具灵活性，如我们可以把消息转发给我们想要的对象，或者随意交换一个方法的实现等。</p>
-<p>这种特性意味着<code>Objective-C</code>不仅需要一个编译器，还需要一个运行时系统来执行编译的代码。对于<code>Objective-C</code>来说，这个运行时系统就像一个操作系统一样：它让所有的工作可以正常的运行。这个运行时系统即Objc <code>Runtime</code>。Objc <code>Runtime</code>其实是一个<code>Runtime</code>库，它基本上是用C和汇编写的，这个库使得C语言有了面向对象的能力。</p>
-<p><strong>Runtime库主要做下面几件事：</strong><br><strong>封装</strong>：在这个库中，对象可以用C语言中的结构体表示，而方法可以用C函数来实现，另外再加上了一些额外的特性。这些结构体和函数被<code>runtime</code>函数封装后，我们就可以在程序运行时创建，检查，修改类、对象和它们的方法了。</p>
-<p><strong>找出方法的最终执行代码</strong>：当程序执行<code>[object doSomething]</code>时，会向消息接收者(object)发送一条消息(doSomething)，<code>runtime</code>会根据消息接收者是否能响应该消息而做出不同的反应。</p>
-<p>###基本解释</p>
-<ul>
-<li>Runtime 是一套比较底层的纯C语言API, 它是OC的幕后工作者</li>
-<li>我们平时写的OC代码在运行时都会编译器转为runtime的C语言代码</li>
-<li>其中最主要的是消息机制OC的函数调用成为消息发送 属于动态调用过程 在编译的时候并不能决定真正调用哪个函数</li>
-<li>事实证明, 在编译阶段，OC可以调用任何函数，即使这个函数并未实现，只要申明过就不会报错</li>
-<li>而C语言在编译阶段就会报错 只有在真正运行的时候才会根据函数的名称找到对应的函数来调用。</li>
-</ul>
-<p>##实际用法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div></pre></td><td class="code"><pre><div class="line">#import &quot;ViewController.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line">#import &lt;objc/message.h&gt;</div><div class="line">#import &quot;Person.h&quot;</div><div class="line">#import &quot;NSObject+my.h&quot;</div><div class="line"></div><div class="line"></div><div class="line">@interface ViewController ()</div><div class="line">@property (weak, nonatomic) IBOutlet UIImageView *phoneImg;</div><div class="line"></div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@implementation ViewController</div><div class="line"></div><div class="line">- (void)viewDidLoad &#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    </div><div class="line">    /******************1.消息发送*******************/</div><div class="line">    </div><div class="line">    Person *p = [Person new];</div><div class="line">//    [p run];</div><div class="line">    objc_msgSend(p,@selector(run));</div><div class="line">    </div><div class="line">    objc_msgSend([Person class], @selector(run));</div><div class="line"></div><div class="line">    /******************2.方法交换*******************/</div><div class="line">    self.phoneImg.image = [UIImage imageNamed:@&quot;banner&quot;];</div><div class="line">    </div><div class="line">    /******************3.获取实例变量*******************/</div><div class="line">    </div><div class="line">    //参数1:你要获取的类,参数2:数量指针</div><div class="line">    </div><div class="line">    unsigned int iVarCount;</div><div class="line">    </div><div class="line">    Ivar *iVarList = class_copyIvarList([Person class], &amp;iVarCount);</div><div class="line">    </div><div class="line">    for (int i = 0; i &lt; iVarCount; i++) &#123;</div><div class="line">        </div><div class="line">        Ivar aVar = iVarList[i];</div><div class="line">        </div><div class="line">        NSLog(@&quot;%s&quot;,ivar_getName(aVar));</div><div class="line">    &#125;</div><div class="line">    /******************4.获取对象方法*******************/</div><div class="line">    unsigned int methodCount;</div><div class="line">    </div><div class="line">    Method *methodList = class_copyMethodList([Person class], &amp;methodCount);</div><div class="line">    </div><div class="line">    for (int i = 0; i &lt; methodCount; i++) &#123;</div><div class="line">        </div><div class="line">        Method aMethod = methodList[i];</div><div class="line">        </div><div class="line">        SEL methodSel = method_getName(aMethod);</div><div class="line">        </div><div class="line">        NSLog(@&quot;%@&quot;,NSStringFromSelector(methodSel));</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************5.动态创建类,添加实例变量*******************/</div><div class="line">    </div><div class="line">    //创建一个类 参数1:父类 参数2:你要创建的类名 参数3:</div><div class="line">     Class MyClass = objc_allocateClassPair([Person class], &quot;MyClass&quot;, 0);</div><div class="line">    </div><div class="line">    </div><div class="line">    //添加实例变量  参数1:要往哪个类添加, 参数2:变量名 参数3:变量大小 参数4:对齐方式-传0 参数5:类型编码(要去文档查看)</div><div class="line">    </div><div class="line">    </div><div class="line">    if (class_addIvar(MyClass, &quot;_city&quot;, sizeof(NSString *), 0, &quot;@&quot;)) &#123;</div><div class="line">        NSLog(@&quot;变量添加成功&quot;);</div><div class="line">        </div><div class="line">        </div><div class="line">        id myP = [[MyClass alloc]init];//使用id类型来接收</div><div class="line">        </div><div class="line">        //赋值</div><div class="line">        [myP setValue:@&quot;广州&quot; forKey:@&quot;_city&quot;];</div><div class="line">        </div><div class="line">        //取出</div><div class="line">        NSLog(@&quot;%@&quot;,[myP valueForKey:@&quot;_city&quot;]);</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************6.动态创建类,添加对象方法*******************/</div><div class="line">    </div><div class="line">    //添加对象方法  参数1:要往哪个类添加, 参数2:方法选择器 参数3:实现 参数4:实现的函数类型编码(要去文档查看)</div><div class="line">    </div><div class="line">    if (class_addMethod(MyClass, @selector(aMethod:), (IMP)aMethod_IMP, &quot;v@:@&quot;)) &#123;</div><div class="line">        </div><div class="line">        NSLog(@&quot;方法添加成功&quot;);</div><div class="line">        </div><div class="line">        id myP = [[MyClass alloc]init];//使用id类型来接收</div><div class="line">        </div><div class="line">        [myP aMethod:@&quot;哈哈&quot;];</div><div class="line">        </div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************7.分类添加属性*******************/</div><div class="line">    </div><div class="line">    NSObject *obj = [NSObject new];</div><div class="line"></div><div class="line">    obj.myName = @&quot;aNema&quot;;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%@&quot;,obj.myName);</div><div class="line">    </div><div class="line">    </div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">//方法实现</div><div class="line">void aMethod_IMP(id self,SEL _cmd,NSString * str)&#123;</div><div class="line"></div><div class="line">    NSLog(@&quot;%s = %@&quot;,__func__,str);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">//OC里的方法</div><div class="line">- (void)aMethod:(NSString *)str&#123;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%s&quot;,__func__);</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
-<p>###UIImage分类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">//</div><div class="line">//  UIImage+my.m</div><div class="line">//  01-runtime</div><div class="line">//</div><div class="line">//  Created by iOS on 15/12/24.</div><div class="line">//  Copyright © 2015年 iOS. All rights reserved.</div><div class="line">//</div><div class="line"></div><div class="line">#import &quot;UIImage+my.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line"></div><div class="line">@implementation UIImage (my)</div><div class="line"></div><div class="line">+ (void)load&#123;</div><div class="line">    </div><div class="line">    //1.获取旧方法</div><div class="line">    </div><div class="line">    Method imageNameM = class_getClassMethod(self, @selector(imageNamed:));</div><div class="line">    </div><div class="line">    //2.获取新方法</div><div class="line">    Method imageWithNameM = class_getClassMethod(self, @selector(imageWithName:));</div><div class="line">    </div><div class="line">    //3.交换</div><div class="line">    </div><div class="line">    method_exchangeImplementations(imageNameM, imageWithNameM);</div><div class="line">    </div><div class="line">    </div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//+ (UIImage *)imageNamed:(NSString *)name&#123;</div><div class="line">//    </div><div class="line">//&#125;</div><div class="line"></div><div class="line"></div><div class="line">+ (UIImage *)imageWithName:(NSString *)name&#123;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%s&quot;,__func__);</div><div class="line">    </div><div class="line">    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) &#123;</div><div class="line">        </div><div class="line">        name = [name stringByAppendingString:@&quot;_iPad&quot;];</div><div class="line">        </div><div class="line">    &#125;else &#123;</div><div class="line">        name = [name stringByAppendingString:@&quot;_iPhone&quot;];</div><div class="line">    &#125;</div><div class="line">    </div><div class="line"></div><div class="line">    return [self imageWithName:name];</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure></p>
-<p>###NSObject分类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">//</div><div class="line">//  NSObject+my.m</div><div class="line">//  01-runtime</div><div class="line">//</div><div class="line">//  Created by iOS on 15/12/24.</div><div class="line">//  Copyright © 2015年 iOS. All rights reserved.</div><div class="line">//</div><div class="line"></div><div class="line">#import &quot;NSObject+my.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line"></div><div class="line">@implementation NSObject (my)</div><div class="line"></div><div class="line">static const void *myNameKey = &quot;myNameKey&quot;;</div><div class="line"></div><div class="line">- (void)setMyName:(NSString *)myName&#123;</div><div class="line">    </div><div class="line">//    [self setValue:myName forKey:@&quot;myName&quot;];</div><div class="line">    </div><div class="line">    //设置关联  参数1:要关联的对象 参数2:绑定的key 参数3:这个key要关联的值 参数4:要使用的策略</div><div class="line">    objc_setAssociatedObject(self, myNameKey, myName, OBJC_ASSOCIATION_COPY_NONATOMIC);</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line">- (NSString *)myName&#123;</div><div class="line">    </div><div class="line">//    return [self valueForKey:@&quot;myName&quot;];</div><div class="line">    return objc_getAssociatedObject(self, myNameKey);</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/22/iOS集成极光推送/" itemprop="url">
-                  iOS集成极光推送
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-22T16:07:29+08:00" content="2016-09-22">
-              2016-09-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><strong>我们先来生成调试环境下的调试证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-ac8aa55032575a04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>这时候要生成一个本地的CSR文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-66a06b3e06e759a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>从系统的钥匙串app生成一个CSR文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-89d0068cef709bc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a96b003a50810b7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>下载调试证书到本地,保存好</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-01bb64de88319035.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>添加调试app的设备</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5d8df82381846096.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-e28a32af38b95745.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
-<li><strong>如何查看你的设备的UDID</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a6d5da7ec84cab42.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-05884f0bc1c8575d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-</li>
-<li><strong>添加你的APP ID</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4c53901400a0f1bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>填写你的app信息</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-dc28e339f19ceb7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>一定要勾选推送通知</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-73aecf99e2bf91d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>回到最上面创建推送证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9147b7ade9b86b82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>选择生成推送证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-711ebba3bc8d20a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5ee33846c65b5f43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-d6feb459f4b14043.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-2d899d06bcf371ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>生成描述文件,匹配你的app,调试设备,和电脑</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-24bff54fa810a178.png" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9402c619bc969546.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-98bcbe3aa533d76c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-f82b08294a9156bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-bcb2f2c64570a3da.png" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-c628a8b6c41aa014.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-7ff1549ee15b493f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>双击运行调试证书 推送证书 和描述文件, 看起来没反应,事实上它们已经分别添加到你的钥匙串和Xcode里面了</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-24375789727396e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
-<li><strong>如果提示签发者无效有两种解决办法</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4c3b404c1c90dd0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><strong>如果是你的worldWide Developer过期 分别在左侧登陆和系统中把过期的证书删除,然后重新下载一个新的证书导入即可</strong><br><strong>传送门</strong><br><a href="https://developer.apple.com/certificationauthority/AppleWWDRCA.cer" target="_blank" rel="external">https://developer.apple.com/certificationauthority/AppleWWDRCA.cer</a><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9f9e8a188b015246.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>另一种方法是更改权限</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-04f6e1fa8176931f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-1157d5fe0a2af9ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-0162c71ab35e8e6d.png" alt=""></li>
-</ul>
-</li>
-<li><strong>导出p12文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-61c314e977074784.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4459fdb237a6f52d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>来到极光官网创建集成app</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-460858f1bf184ed6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>上传成功之后会自动生成AppKey</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5adb7b2261db9e04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>创建工程, 用cocoaPods集成极光推送</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-47f232c2b2e0baf7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>根据官网iOS集成指南集成极光推送</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-c85267ccc9f134d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>真机调试的时候选择相应账户进行测试</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9d13b87fb016b066.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
-<li><strong>记得替换刚才自动生成的appkey</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-894437f8b7c02abd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-</li>
-<li><strong>添加测试证书和生产证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-fd5a118b2b842cef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>运行, 打印日志中没有报错, 并且显示<code>upload device token success</code>的时候,就代表集成成功了</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-3b28c6acbf8248cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>在极光平台进行推送测试</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-60f82c46dc3d3dd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li><strong>测试推送消息成功,基本的集成完毕</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a7e27ea7f7f7b46c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -876,7 +876,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -884,7 +884,7 @@
             <div class="site-state-item site-state-categories">
               
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">categories</span>
+                <span class="site-state-item-name">Kategorien</span>
               
             </div>
           
@@ -930,7 +930,7 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
