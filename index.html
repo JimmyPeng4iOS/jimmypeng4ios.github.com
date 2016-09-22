@@ -1,345 +1,1033 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 
+
+
+  
+
+
+<html class="theme-next muse use-motion">
 <head>
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>J&amp;M</title>
-  <meta name="description" content="一个不会做实验的程序猿不是一个好厨子" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="/css/component.css" />
-  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
-  <meta name="generator" content="J&M">
-  <script src="http://static.duoshuo.com/embed.js"></script>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
   
   
   
-
   
 
-</head>
-<body>
-<div class="container">
-    <div class="mp-pusher" id="mp-pusher">
-        <i id="scroll-up" class="fa fa-angle-up"></i>
-        <nav id="mp-menu" class="mp-menu">
-            <div class="mp-level">
-                <a data-pjax class="back-home" style="font-size: 20px" href="/"><h2 ><i class="fa fa-home"></i>
-                        Home</h2></a>
-                <ul class="first-level">
-                    <li>
-                        <a class="fa fa-archive" href="#"><i class="fa fa-angle-left">
-                            </i>&nbsp;&nbsp;Archive</a>
-                        <div class="mp-level page-list">
-                            <h2 ><i class="fa fa-archive"></i>
-                                Archive</h2>
-                            <a class="mp-back" href="#">back</a>
-                            <form id="search-form" action="">
-                                <input type="text" class="search search-archive" placeholder="Search.."/>
-                            </form>
-                            <ul>
-                                <div class="mp-scroll">
-                                
-                                <li class="search-archive-li mp-pjax">
-                                    <a href="/2016/09/22/HTML5基础介绍/">HTML5基础介绍</a>
-                                </li>
-                                
-                                <li class="search-archive-li mp-pjax">
-                                    <a href="/2016/09/22/Runtime基本介绍/">Runtime基本介绍</a>
-                                </li>
-                                
-                                <li class="search-archive-li mp-pjax">
-                                    <a href="/2016/09/22/iOS集成极光推送/">iOS集成极光推送</a>
-                                </li>
-                                
-                                </div>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="fa fa-copy" href="#"><i class="fa fa-angle-left">
-                            </i>&nbsp;&nbsp;Categories</a>
-
-                        <div class="mp-level page-list">
-                            <h2 ><i class="fa fa-copy"></i>
-                                Categories</h2>
-                            <a class="mp-back" href="#">back</a>
-                            <form id="search-form" action="">
-                                <input type="text" class="search search-category" placeholder="Search.."/>
-                            </form>
-                            <ul>
-                                <div class="mp-scroll">
-                                
-                                <li class="search-category-li mp-pjax">
-                                    <a href="/categories/iOS/">&nbsp;&nbsp;&nbsp;iOS</a>
-                                    <small>2</small>
-                                </li>
-                                
-                                <li class="search-category-li mp-pjax">
-                                    <a href="/categories/web前端/">&nbsp;&nbsp;&nbsp;web前端</a>
-                                    <small>1</small>
-                                </li>
-                                
-                                </div>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="fa fa-tags" href="#"><i class="fa fa-angle-left">
-                            </i>&nbsp;&nbsp;Tags</a>
-                        <div class="mp-level page-list">
-                            <h2 ><i class="fa fa-tags"></i>
-                                Tags</h2>
-                            <a class="mp-back" href="#">back</a>
-                            <form id="search-form" action="">
-                                <input type="text" class="search search-tag" placeholder="Search.."/>
-                            </form>
-                            <ul>
-                                <div class="mp-scroll">
-                                
-                                </div>
-                            </ul>
-                        </div>
-                    </li>
-                    
-                    <li class="mp-pjax"><a class="fa fa-user" href="/about">&nbsp;&nbsp;&nbsp;About me</a></li>
-                    <li><a class="fa fa-github" href="#">&nbsp;&nbsp;&nbsp;Github</a></li>
-
-                </ul>
-
-            </div>
-        </nav>
-        <div id="pjax">
-            <div class="pjax-hidden" style="display: none">
-                
-                    <a  data-pjax href="/2016/09/22/HTML5基础介绍/">HTML5基础介绍</a>
-                
-                    <a  data-pjax href="/2016/09/22/Runtime基本介绍/">Runtime基本介绍</a>
-                
-                    <a  data-pjax href="/2016/09/22/iOS集成极光推送/">iOS集成极光推送</a>
-                
-                
-                    <a data-pjax href="/categories/iOS/">&nbsp;&nbsp;iOS</a>
-                
-                    <a data-pjax href="/categories/web前端/">&nbsp;&nbsp;web前端</a>
-                
-                
-                <a data-pjax class="fa fa-user" href="/about">&nbsp;&nbsp;&nbsp;About me</a>
-            </div>
-            <nav class="nexus">
-                <li  style="border-left: 1px solid #c6d0da;">
-                    <a id="trigger" href="#"><i class="fa fa-bars"></i></a>
-                </li>
-                <li ><a id="nexus-back" data-pjax href="/">J&amp;M</a></li>
-                
-            </nav>
-
-            <div class="scroller">
-            <div class="scroller-inner">
-
-
-<!-- -->
-<!--<body class="home-template">-->
-<!---->
   
-<main class="content" role="main">
-
     
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/09/22/HTML5基础介绍/">HTML5基础介绍</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-09-22T08:07:29.000Z"
-                      itemprop="datePublished">2016-09-22</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                
-
-HTML5 肯定不是多了一些标签就完事了HTML5 根酷炫没什么关系，更多的职责是功能，而不是外观
-
-
-概要WEB技术阶段
-Web 1.0 内容为主，主要流行HTML和CSS
-Web 2.0 动态网页，流行AJAX/JavaScript/DOM
-HTML5 时代，WEB开发回归富客户端
-
-什么是HTML5
-是HTML的超集，不仅仅是HTML，更多的是JavaScript API和CSS的提升，
-构建 Web 应用程序整体解决方案
-
-
-                
-            </p>
-            
-            <p>
-                <a data-pjax href="/2016/09/22/HTML5基础介绍/"
-                   class="excerpt-link">Read More...</a>
-            </p>
-            
-        </section>
-    </article>
     
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/09/22/Runtime基本介绍/">Runtime基本介绍</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-09-22T08:07:29.000Z"
-                      itemprop="datePublished">2016-09-22</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                Objective-C语言是一门动态语言，它将很多静态语言在编译和链接时期做的事放到了运行时来处理。这种动态语言的优势在于：我们写代码时更具灵活性，如我们可以把消息转发给我们想要的对象，或者随意交换一个方法的实现等。
-这种特性意味着Objective-C不仅需要一个编译器，还需要一个运行时系统来执行编译的代码。对于Objective-C来说，这个运行时系统就像一个操作系统一样：它让所有的工作可以正常的运行。这个运行时系统即Objc Ru
-                
-            </p>
-            
-            <p>
-                <a data-pjax href="/2016/09/22/Runtime基本介绍/"
-                   class="excerpt-link">Read More...</a>
-            </p>
-            
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/09/22/iOS集成极光推送/">iOS集成极光推送</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-09-22T08:07:29.000Z"
-                      itemprop="datePublished">2016-09-22</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                
-我们先来生成调试环境下的调试证书
-这时候要生成一个本地的CSR文件
-从系统的钥匙串app生成一个CSR文件
-下载调试证书到本地,保存好
-添加调试app的设备
-如何查看你的设备的UDID
-
-
-添加你的APP ID
-填写你的app信息
-一定要勾选推送通知
-回到最上面创建推送证书
-选择生成推送证书
-生成描述文件,匹配你的app,调试设备,和电脑
-双击运行调试证书 推送证书 和描述文件, 看起来没反应,事实上它们已经分别添加到你的钥匙串和Xc
-                
-            </p>
-            
-            <p>
-                <a data-pjax href="/2016/09/22/iOS集成极光推送/"
-                   class="excerpt-link">Read More...</a>
-            </p>
-            
-        </section>
-    </article>
-    
-    <nav class="pagination" role="pagination">
-        
-        <span class="page-number">Page 1 of 1</span>
-        
-    </nav>
-</main>
-
+  
 
   
-<footer class="site-footer">
-    
-    <div class="inner">
-        <section class="copyright"><a href="/"></a> &copy; J&M 2014</section>
-        <section class="poweredby">Published with <a target="_blank" href="http://hexo.io/">Hexo   </a> and Theme by <a target="_blank" href="https://github.com/yuche/hexo-theme-kael">Kael</a></section>
-    </div>
-</footer>
-</div>
-</div><!-- /scroller -->
 
-</div><!-- /pusher -->
-</div><!-- /container -->
-</div>
-
-<!-- Easter eggs -->
-
-<div class="egg animated">
-    <a id="close-button" href="#">X</a>
-    <div class="block">
-        <div class="loading">
-            <span class="ball1"></span>
-            <span class="ball2"></span>
-        </div>
-    </div>
-</div>
   
-<script src="//cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>
-<script>
-    if (!window.jQuery) {
-        var script = document.createElement('script');
-        script.src = "/js/jquery.min.js";
-        document.body.appendChild(script);
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="jimmypeng | ios blog | html5">
+<meta property="og:type" content="website">
+<meta property="og:title" content="J&M">
+<meta property="og:url" content="http://jimmypeng.cn/index.html">
+<meta property="og:site_name" content="J&M">
+<meta property="og:description" content="jimmypeng | ios blog | html5">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="J&M">
+<meta name="twitter:description" content="jimmypeng | ios blog | html5">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
     }
+  };
 </script>
-<script type="text/javascript" src="/js/lib.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+
+  <link rel="canonical" href="http://jimmypeng.cn/"/>
+
+  <title> J&M </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
 
 
 
 
 
-<link rel="stylesheet" href="/modules/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/modules/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">J&M</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一个不会做实验的程序猿不是一个好厨子</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/22/HTML5基础介绍/" itemprop="url">
+                  HTML5基础介绍
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-22T16:07:29+08:00" content="2016-09-22">
+              2016-09-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://upload-images.jianshu.io/upload_images/1115674-912ecc828fbcf549.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p>HTML5 肯定不是多了一些标签就完事了<br>HTML5 根酷炫没什么关系，更多的职责是功能，而不是外观</p>
+</blockquote>
+<hr>
+<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><h3 id="WEB技术阶段"><a href="#WEB技术阶段" class="headerlink" title="WEB技术阶段"></a>WEB技术阶段</h3><ol>
+<li>Web 1.0 内容为主，主要流行HTML和CSS</li>
+<li>Web 2.0 动态网页，流行AJAX/JavaScript/DOM</li>
+<li>HTML5 时代，WEB开发回归富客户端</li>
+</ol>
+<h3 id="什么是HTML5"><a href="#什么是HTML5" class="headerlink" title="什么是HTML5"></a>什么是HTML5</h3><ul>
+<li>是HTML的超集，不仅仅是HTML，更多的是JavaScript API和CSS的提升，</li>
+<li>构建 Web 应用程序整体解决方案</li>
+</ul>
+<blockquote>
+<p>API的概念就是我们编程时所依赖的东西的总称</p>
+</blockquote>
+<h3 id="什么是Web-Application"><a href="#什么是Web-Application" class="headerlink" title="什么是Web Application"></a>什么是Web Application</h3><ul>
+<li>HTML5 前身，由WHATWG组织提出</li>
+<li>推出的目的主要是提高Web应用程序的功能</li>
+<li>2007年提交到W3C组织，成了现在我们看到的HTML5</li>
+</ul>
+<h3 id="HTML5应用场景"><a href="#HTML5应用场景" class="headerlink" title="HTML5应用场景"></a>HTML5应用场景</h3><ul>
+<li>极具表现力的网页<ul>
+<li>案例非常多</li>
+</ul>
+</li>
+<li>网页应用程序<ul>
+<li>PC端：iCloud、百度脑图、Office 365···</li>
+<li>APP端：淘宝、京东、美团···</li>
+<li>WeChat端：淘宝、京东、美团···</li>
+</ul>
+</li>
+<li>混合式本地应用<ul>
+<li>PC端：网易云音乐、有道词典···</li>
+<li>APP端：淘宝、京东、美团···</li>
+</ul>
+</li>
+<li>简单的游戏</li>
+</ul>
+<h3 id="H5新特性概要"><a href="#H5新特性概要" class="headerlink" title="H5新特性概要"></a>H5新特性概要</h3><h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><ul>
+<li>标签<ul>
+<li>更语义化标签</li>
+</ul>
+</li>
+<li>智能表单<ul>
+<li>新的表单类型，如：email,url,number</li>
+<li>新增表单功能属性，如：autocomplete，autofocus</li>
+<li>虚拟键盘适配，通过表单的类型决定移动端弹出的键盘类型</li>
+</ul>
+</li>
+<li>网页多媒体，我们可以在网页中直接通过原生方式播放视频音频<ul>
+<li>音频</li>
+<li>视频</li>
+<li>字幕</li>
+</ul>
+</li>
+<li>属性，语义化属性<ul>
+<li>链接关系描述</li>
+<li>结构数据标记</li>
+<li>ARIA</li>
+<li>自定义属性</li>
+</ul>
+</li>
+<li>Canvas，提供网页绘图的可能，后面在Canvas课程会专门去学习<ul>
+<li>2D 绘图</li>
+<li>3D (WebGL)</li>
+</ul>
+</li>
+<li>SVG</li>
+</ul>
+<h4 id="JavaScript-API"><a href="#JavaScript-API" class="headerlink" title="JavaScript API"></a>JavaScript API</h4><ul>
+<li>核心平台提升，JS在DOM和BOM两个方向上都新增了很多api，便于开发应用程序<ul>
+<li>新的选择器</li>
+<li>Element.classList</li>
+<li>访问历史API</li>
+<li>全屏API</li>
+</ul>
+</li>
+<li>网页存储，提供网页中操作客户端本地存储的API<ul>
+<li>Application Cache</li>
+<li>localStorage</li>
+<li>sessionStorage</li>
+<li>WebSQL</li>
+<li>IndexedDB</li>
+</ul>
+</li>
+<li>设备信息访问，JS可以访问硬件的一些信息，我们在移动手机APP的课程中再看<ul>
+<li>网络状态</li>
+<li>硬件访问</li>
+<li>设备方向</li>
+<li>地理围栏</li>
+</ul>
+</li>
+<li>拖放操作<ul>
+<li>网页内拖放</li>
+<li>桌面拖入</li>
+</ul>
+</li>
+<li>文件<ul>
+<li>文件系统API</li>
+<li>FileReader</li>
+</ul>
+</li>
+<li>网络访问<ul>
+<li>XMLHttpRequest</li>
+<li>fetch</li>
+<li>WebSocket</li>
+</ul>
+</li>
+<li>多线程</li>
+<li>桌面通知，</li>
+</ul>
+<h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><ul>
+<li>后面详细讨论</li>
+</ul>
+<hr>
+<h2 id="HTML5-骨架"><a href="#HTML5-骨架" class="headerlink" title="HTML5 骨架"></a>HTML5 骨架</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- HTML5的DOCTYPE声明做了最大简化 --&gt;</span></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 在标准的HTML5骨架中charset是直接在meta中设置charset --&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 字符编码的设置一定是在head中的第一行 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>页面标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    </div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>HTML5的DOCTYPE声明做了最大简化</li>
+<li>在标准的HTML5骨架中charset是直接在meta中设置charset</li>
+<li>字符编码的设置一定是在head中的第一行，再晚就来不及了</li>
+</ul>
+<h2 id="语义化标签"><a href="#语义化标签" class="headerlink" title="语义化标签"></a>语义化标签</h2><h3 id="什么是语义化标签"><a href="#什么是语义化标签" class="headerlink" title="什么是语义化标签"></a>什么是语义化标签</h3><ul>
+<li>HTML5中制定了一系列语义化标签：<ul>
+<li>section：独立的内容节块，一般包含标题和内容</li>
+<li>article：一种特殊的section，定义文档中的具体的文章内容</li>
+<li>nav：页面导航的链接组</li>
+<li>aside：标签用来装载非正文的内容，此标签中的文字权重低</li>
+<li>header：定义文档的页眉，不仅仅是文档的页头可以使用header，一个独立块的头部也应该使用header</li>
+<li>footer：定义section或document的页脚</li>
+</ul>
+</li>
+<li>我们应该根据内容的性质决定使用特定的标签</li>
+<li><p>h1一定只能出现一个，不是HTML的约定，页面中最重要的内容</p>
+</li>
+<li><p>time标签专门用于时间，</p>
+<ul>
+<li>datetime应该是一个标准时间格式，</li>
+<li>pubdate指的是当前时间为article的发布时间 </li>
+</ul>
+</li>
+<li><p>在H5中，主体结构标签默认和DIV都是相同的块级效果，</p>
+</li>
+<li>但是DIV没有语义，而以上标签有特定语义</li>
+</ul>
+<h3 id="为什么要有语义化标签"><a href="#为什么要有语义化标签" class="headerlink" title="为什么要有语义化标签"></a>为什么要有语义化标签</h3><ul>
+<li>能够便于开发者阅读和写出更优雅的代码，代码如诗</li>
+<li>同时让浏览器或是网络爬虫可以很好地解析，从而更好分析其中的内容</li>
+<li>使用语义化标签会具有更好地搜索引擎优化</li>
+</ul>
+<h4 id="切记"><a href="#切记" class="headerlink" title="切记"></a>切记</h4><ul>
+<li>HTML的职责是描述一块内容是什么（或其意义）</li>
+<li>而不是它长的什么样子，它的外观应该由CSS来决定。</li>
+</ul>
+<hr>
+<h2 id="智能表单"><a href="#智能表单" class="headerlink" title="智能表单"></a>智能表单</h2><h3 id="新的表单类型"><a href="#新的表单类型" class="headerlink" title="新的表单类型"></a>新的表单类型</h3><ul>
+<li>email - 限定输入内容为邮箱地址，表单提交时会校验格式</li>
+<li>url - 限定输入内容为URL，表单提交时会校验格式</li>
+<li>number - 限定输入内容为数字，表单提交时会校验格式</li>
+<li>range - 数值范围选择器</li>
+<li>Date Pickers - 日期时间选择器<ul>
+<li>样式不能修改，移动端用的比较多，因为移动端显示的是系统的时间或日期选择器</li>
+<li>date - 选取日、月、年</li>
+<li>month - 选取月、年</li>
+<li>week - 选取周和年</li>
+<li>time - 选取时间（小时和分钟）</li>
+<li>datetime - 选取时间、日、月、年，浏览器兼容性不好，效果等同于datetime-local</li>
+<li>datetime-local - 选取本地时间、日、月、年</li>
+</ul>
+</li>
+<li>search - 搜索域，语义化，表示定义搜索框</li>
+</ul>
+<h3 id="新的表单属性"><a href="#新的表单属性" class="headerlink" title="新的表单属性"></a>新的表单属性</h3><ul>
+<li><p>form</p>
+<ul>
+<li>autocomplete 设置整个表单是否开启自动完成 on|off</li>
+<li>novalidate 设置H5的表单校验是否工作 true 不工作  不加该属性代表校验</li>
+</ul>
+</li>
+<li><p>input:</p>
+<ul>
+<li>autocomplete 单独设置每个文本框的自动完成</li>
+<li>autofocus 设置当前文本域页面加载完了过后自动得到焦点</li>
+<li>form 属性是让表单外的表单元素也可以跟随表单一起提交</li>
+<li>form overrides<ul>
+<li>formaction 在submit上重写表单的特定属性，当点击当前submit时会以当前值使用</li>
+<li>formenctype,</li>
+<li>formmethod,</li>
+<li>formnovalidate,</li>
+<li>formtarget</li>
+</ul>
+</li>
+<li>list 作用就是指定当前文本框的自动完成列表的数据 datalist 在界面上是看不见的，只是用于定义数据列表的</li>
+<li>min / max / step<ul>
+<li>min max 限制值的范围，但是不会再输入时限制，提交时校验，</li>
+<li>step设置的是每次加减的增量</li>
+<li>主要使用在number range datepicker上</li>
+</ul>
+</li>
+<li>multiple<ul>
+<li>文本域的多选</li>
+</ul>
+</li>
+<li>pattern<ul>
+<li>设置文本框的匹配格式（正则）</li>
+</ul>
+</li>
+<li>placeholder<ul>
+<li>文本框占位符</li>
+</ul>
+</li>
+<li>required<ul>
+<li>限制当前input为必须的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="虚拟键盘适配"><a href="#虚拟键盘适配" class="headerlink" title="虚拟键盘适配"></a>虚拟键盘适配</h3><ul>
+<li>在移动端中，我们可以通过不同的表单类型控制弹出的键盘类型</li>
+</ul>
+<h3 id="关于什么时候使用H5的新特性，能不能使用新特性的问题"><a href="#关于什么时候使用H5的新特性，能不能使用新特性的问题" class="headerlink" title="关于什么时候使用H5的新特性，能不能使用新特性的问题"></a>关于什么时候使用H5的新特性，能不能使用新特性的问题</h3><ul>
+<li>无伤大雅的地方直接用<ul>
+<li>比如一个文本框，加上placeholder就具备占位文本提示功能，浏览器不支持也不会报错，那就可以直接使用</li>
+<li>再比如<code>&lt;input type=&quot;email&quot;&gt;</code>，如果浏览器不支持，默认会显示文本框，那也可以直接用。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="网页多媒体"><a href="#网页多媒体" class="headerlink" title="网页多媒体"></a>网页多媒体</h2><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><h3 id="多媒体标签属性"><a href="#多媒体标签属性" class="headerlink" title="多媒体标签属性"></a>多媒体标签属性</h3><h3 id="自定义播放器外观"><a href="#自定义播放器外观" class="headerlink" title="自定义播放器外观"></a>自定义播放器外观</h3><h3 id="全屏-API"><a href="#全屏-API" class="headerlink" title="全屏 API"></a>全屏 API</h3><h3 id="SVG"><a href="#SVG" class="headerlink" title="SVG *"></a>SVG *</h3><hr>
+<h2 id="JS-基础-API"><a href="#JS-基础-API" class="headerlink" title="JS 基础 API"></a>JS 基础 API</h2><h3 id="新选择器"><a href="#新选择器" class="headerlink" title="新选择器"></a>新选择器</h3><h3 id="Element-classList"><a href="#Element-classList" class="headerlink" title="Element.classList"></a>Element.classList</h3><h3 id="自定义属性-DATA"><a href="#自定义属性-DATA" class="headerlink" title="自定义属性 DATA-* !"></a>自定义属性 DATA-* !</h3><h3 id="访问历史API"><a href="#访问历史API" class="headerlink" title="访问历史API *"></a>访问历史API *</h3>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/22/Runtime基本介绍/" itemprop="url">
+                  Runtime基本介绍
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-22T16:07:29+08:00" content="2016-09-22">
+              2016-09-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><code>Objective-C</code>语言是一门动态语言，它将很多静态语言在编译和链接时期做的事放到了运行时来处理。这种动态语言的优势在于：我们写代码时更具灵活性，如我们可以把消息转发给我们想要的对象，或者随意交换一个方法的实现等。</p>
+<p>这种特性意味着<code>Objective-C</code>不仅需要一个编译器，还需要一个运行时系统来执行编译的代码。对于<code>Objective-C</code>来说，这个运行时系统就像一个操作系统一样：它让所有的工作可以正常的运行。这个运行时系统即Objc <code>Runtime</code>。Objc <code>Runtime</code>其实是一个<code>Runtime</code>库，它基本上是用C和汇编写的，这个库使得C语言有了面向对象的能力。</p>
+<p><strong>Runtime库主要做下面几件事：</strong><br><strong>封装</strong>：在这个库中，对象可以用C语言中的结构体表示，而方法可以用C函数来实现，另外再加上了一些额外的特性。这些结构体和函数被<code>runtime</code>函数封装后，我们就可以在程序运行时创建，检查，修改类、对象和它们的方法了。</p>
+<p><strong>找出方法的最终执行代码</strong>：当程序执行<code>[object doSomething]</code>时，会向消息接收者(object)发送一条消息(doSomething)，<code>runtime</code>会根据消息接收者是否能响应该消息而做出不同的反应。</p>
+<p>###基本解释</p>
+<ul>
+<li>Runtime 是一套比较底层的纯C语言API, 它是OC的幕后工作者</li>
+<li>我们平时写的OC代码在运行时都会编译器转为runtime的C语言代码</li>
+<li>其中最主要的是消息机制OC的函数调用成为消息发送 属于动态调用过程 在编译的时候并不能决定真正调用哪个函数</li>
+<li>事实证明, 在编译阶段，OC可以调用任何函数，即使这个函数并未实现，只要申明过就不会报错</li>
+<li>而C语言在编译阶段就会报错 只有在真正运行的时候才会根据函数的名称找到对应的函数来调用。</li>
+</ul>
+<p>##实际用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div></pre></td><td class="code"><pre><div class="line">#import &quot;ViewController.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line">#import &lt;objc/message.h&gt;</div><div class="line">#import &quot;Person.h&quot;</div><div class="line">#import &quot;NSObject+my.h&quot;</div><div class="line"></div><div class="line"></div><div class="line">@interface ViewController ()</div><div class="line">@property (weak, nonatomic) IBOutlet UIImageView *phoneImg;</div><div class="line"></div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@implementation ViewController</div><div class="line"></div><div class="line">- (void)viewDidLoad &#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    </div><div class="line">    /******************1.消息发送*******************/</div><div class="line">    </div><div class="line">    Person *p = [Person new];</div><div class="line">//    [p run];</div><div class="line">    objc_msgSend(p,@selector(run));</div><div class="line">    </div><div class="line">    objc_msgSend([Person class], @selector(run));</div><div class="line"></div><div class="line">    /******************2.方法交换*******************/</div><div class="line">    self.phoneImg.image = [UIImage imageNamed:@&quot;banner&quot;];</div><div class="line">    </div><div class="line">    /******************3.获取实例变量*******************/</div><div class="line">    </div><div class="line">    //参数1:你要获取的类,参数2:数量指针</div><div class="line">    </div><div class="line">    unsigned int iVarCount;</div><div class="line">    </div><div class="line">    Ivar *iVarList = class_copyIvarList([Person class], &amp;iVarCount);</div><div class="line">    </div><div class="line">    for (int i = 0; i &lt; iVarCount; i++) &#123;</div><div class="line">        </div><div class="line">        Ivar aVar = iVarList[i];</div><div class="line">        </div><div class="line">        NSLog(@&quot;%s&quot;,ivar_getName(aVar));</div><div class="line">    &#125;</div><div class="line">    /******************4.获取对象方法*******************/</div><div class="line">    unsigned int methodCount;</div><div class="line">    </div><div class="line">    Method *methodList = class_copyMethodList([Person class], &amp;methodCount);</div><div class="line">    </div><div class="line">    for (int i = 0; i &lt; methodCount; i++) &#123;</div><div class="line">        </div><div class="line">        Method aMethod = methodList[i];</div><div class="line">        </div><div class="line">        SEL methodSel = method_getName(aMethod);</div><div class="line">        </div><div class="line">        NSLog(@&quot;%@&quot;,NSStringFromSelector(methodSel));</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************5.动态创建类,添加实例变量*******************/</div><div class="line">    </div><div class="line">    //创建一个类 参数1:父类 参数2:你要创建的类名 参数3:</div><div class="line">     Class MyClass = objc_allocateClassPair([Person class], &quot;MyClass&quot;, 0);</div><div class="line">    </div><div class="line">    </div><div class="line">    //添加实例变量  参数1:要往哪个类添加, 参数2:变量名 参数3:变量大小 参数4:对齐方式-传0 参数5:类型编码(要去文档查看)</div><div class="line">    </div><div class="line">    </div><div class="line">    if (class_addIvar(MyClass, &quot;_city&quot;, sizeof(NSString *), 0, &quot;@&quot;)) &#123;</div><div class="line">        NSLog(@&quot;变量添加成功&quot;);</div><div class="line">        </div><div class="line">        </div><div class="line">        id myP = [[MyClass alloc]init];//使用id类型来接收</div><div class="line">        </div><div class="line">        //赋值</div><div class="line">        [myP setValue:@&quot;广州&quot; forKey:@&quot;_city&quot;];</div><div class="line">        </div><div class="line">        //取出</div><div class="line">        NSLog(@&quot;%@&quot;,[myP valueForKey:@&quot;_city&quot;]);</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************6.动态创建类,添加对象方法*******************/</div><div class="line">    </div><div class="line">    //添加对象方法  参数1:要往哪个类添加, 参数2:方法选择器 参数3:实现 参数4:实现的函数类型编码(要去文档查看)</div><div class="line">    </div><div class="line">    if (class_addMethod(MyClass, @selector(aMethod:), (IMP)aMethod_IMP, &quot;v@:@&quot;)) &#123;</div><div class="line">        </div><div class="line">        NSLog(@&quot;方法添加成功&quot;);</div><div class="line">        </div><div class="line">        id myP = [[MyClass alloc]init];//使用id类型来接收</div><div class="line">        </div><div class="line">        [myP aMethod:@&quot;哈哈&quot;];</div><div class="line">        </div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************7.分类添加属性*******************/</div><div class="line">    </div><div class="line">    NSObject *obj = [NSObject new];</div><div class="line"></div><div class="line">    obj.myName = @&quot;aNema&quot;;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%@&quot;,obj.myName);</div><div class="line">    </div><div class="line">    </div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">//方法实现</div><div class="line">void aMethod_IMP(id self,SEL _cmd,NSString * str)&#123;</div><div class="line"></div><div class="line">    NSLog(@&quot;%s = %@&quot;,__func__,str);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">//OC里的方法</div><div class="line">- (void)aMethod:(NSString *)str&#123;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%s&quot;,__func__);</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
+<p>###UIImage分类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">//</div><div class="line">//  UIImage+my.m</div><div class="line">//  01-runtime</div><div class="line">//</div><div class="line">//  Created by iOS on 15/12/24.</div><div class="line">//  Copyright © 2015年 iOS. All rights reserved.</div><div class="line">//</div><div class="line"></div><div class="line">#import &quot;UIImage+my.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line"></div><div class="line">@implementation UIImage (my)</div><div class="line"></div><div class="line">+ (void)load&#123;</div><div class="line">    </div><div class="line">    //1.获取旧方法</div><div class="line">    </div><div class="line">    Method imageNameM = class_getClassMethod(self, @selector(imageNamed:));</div><div class="line">    </div><div class="line">    //2.获取新方法</div><div class="line">    Method imageWithNameM = class_getClassMethod(self, @selector(imageWithName:));</div><div class="line">    </div><div class="line">    //3.交换</div><div class="line">    </div><div class="line">    method_exchangeImplementations(imageNameM, imageWithNameM);</div><div class="line">    </div><div class="line">    </div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//+ (UIImage *)imageNamed:(NSString *)name&#123;</div><div class="line">//    </div><div class="line">//&#125;</div><div class="line"></div><div class="line"></div><div class="line">+ (UIImage *)imageWithName:(NSString *)name&#123;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%s&quot;,__func__);</div><div class="line">    </div><div class="line">    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) &#123;</div><div class="line">        </div><div class="line">        name = [name stringByAppendingString:@&quot;_iPad&quot;];</div><div class="line">        </div><div class="line">    &#125;else &#123;</div><div class="line">        name = [name stringByAppendingString:@&quot;_iPhone&quot;];</div><div class="line">    &#125;</div><div class="line">    </div><div class="line"></div><div class="line">    return [self imageWithName:name];</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure></p>
+<p>###NSObject分类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">//</div><div class="line">//  NSObject+my.m</div><div class="line">//  01-runtime</div><div class="line">//</div><div class="line">//  Created by iOS on 15/12/24.</div><div class="line">//  Copyright © 2015年 iOS. All rights reserved.</div><div class="line">//</div><div class="line"></div><div class="line">#import &quot;NSObject+my.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line"></div><div class="line">@implementation NSObject (my)</div><div class="line"></div><div class="line">static const void *myNameKey = &quot;myNameKey&quot;;</div><div class="line"></div><div class="line">- (void)setMyName:(NSString *)myName&#123;</div><div class="line">    </div><div class="line">//    [self setValue:myName forKey:@&quot;myName&quot;];</div><div class="line">    </div><div class="line">    //设置关联  参数1:要关联的对象 参数2:绑定的key 参数3:这个key要关联的值 参数4:要使用的策略</div><div class="line">    objc_setAssociatedObject(self, myNameKey, myName, OBJC_ASSOCIATION_COPY_NONATOMIC);</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line">- (NSString *)myName&#123;</div><div class="line">    </div><div class="line">//    return [self valueForKey:@&quot;myName&quot;];</div><div class="line">    return objc_getAssociatedObject(self, myNameKey);</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/22/iOS集成极光推送/" itemprop="url">
+                  iOS集成极光推送
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-22T16:07:29+08:00" content="2016-09-22">
+              2016-09-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><strong>我们先来生成调试环境下的调试证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-ac8aa55032575a04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>这时候要生成一个本地的CSR文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-66a06b3e06e759a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>从系统的钥匙串app生成一个CSR文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-89d0068cef709bc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a96b003a50810b7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>下载调试证书到本地,保存好</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-01bb64de88319035.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>添加调试app的设备</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5d8df82381846096.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-e28a32af38b95745.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
+<li><strong>如何查看你的设备的UDID</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a6d5da7ec84cab42.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-05884f0bc1c8575d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
+</li>
+<li><strong>添加你的APP ID</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4c53901400a0f1bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>填写你的app信息</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-dc28e339f19ceb7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>一定要勾选推送通知</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-73aecf99e2bf91d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>回到最上面创建推送证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9147b7ade9b86b82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>选择生成推送证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-711ebba3bc8d20a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5ee33846c65b5f43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-d6feb459f4b14043.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-2d899d06bcf371ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>生成描述文件,匹配你的app,调试设备,和电脑</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-24bff54fa810a178.png" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9402c619bc969546.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-98bcbe3aa533d76c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-f82b08294a9156bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-bcb2f2c64570a3da.png" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-c628a8b6c41aa014.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-7ff1549ee15b493f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>双击运行调试证书 推送证书 和描述文件, 看起来没反应,事实上它们已经分别添加到你的钥匙串和Xcode里面了</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-24375789727396e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
+<li><strong>如果提示签发者无效有两种解决办法</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4c3b404c1c90dd0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><strong>如果是你的worldWide Developer过期 分别在左侧登陆和系统中把过期的证书删除,然后重新下载一个新的证书导入即可</strong><br><strong>传送门</strong><br><a href="https://developer.apple.com/certificationauthority/AppleWWDRCA.cer" target="_blank" rel="external">https://developer.apple.com/certificationauthority/AppleWWDRCA.cer</a><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9f9e8a188b015246.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>另一种方法是更改权限</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-04f6e1fa8176931f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-1157d5fe0a2af9ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-0162c71ab35e8e6d.png" alt=""></li>
+</ul>
+</li>
+<li><strong>导出p12文件</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-61c314e977074784.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1115674-4459fdb237a6f52d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>来到极光官网创建集成app</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-460858f1bf184ed6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>上传成功之后会自动生成AppKey</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-5adb7b2261db9e04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>创建工程, 用cocoaPods集成极光推送</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-47f232c2b2e0baf7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>根据官网iOS集成指南集成极光推送</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-c85267ccc9f134d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>真机调试的时候选择相应账户进行测试</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-9d13b87fb016b066.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><ul>
+<li><strong>记得替换刚才自动生成的appkey</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-894437f8b7c02abd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
+</li>
+<li><strong>添加测试证书和生产证书</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-fd5a118b2b842cef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>运行, 打印日志中没有报错, 并且显示<code>upload device token success</code>的时候,就代表集成成功了</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-3b28c6acbf8248cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>在极光平台进行推送测试</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-60f82c46dc3d3dd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><strong>测试推送消息成功,基本的集成完毕</strong><br><img src="http://upload-images.jianshu.io/upload_images/1115674-a7e27ea7f7f7b46c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Jimmy Peng" />
+          <p class="site-author-name" itemprop="name">Jimmy Peng</p>
+          <p class="site-description motion-element" itemprop="description">jimmypeng | ios blog | html5</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jimmy Peng</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
 <script type="text/javascript">
-    (function($){
-
-        var wrapAll = function(q) {
-            $(q).each( function() {
-                var $img = $(this),
-                        href = $img.attr('src');
-                $img.wrap('<a rel="fancybox" href="' + href + '" title="' + $img.attr('alt') + '" class="link"></a>');
-            });
-        };
-
-        wrapAll('.post-content img');
-        wrapAll('.post-excerpt img');
-        $('[rel="fancybox"]').fancybox();
-    })(jQuery);
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>
