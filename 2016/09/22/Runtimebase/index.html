@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo, NexT, ios, jimmypeng" />
 
 
 
@@ -88,11 +88,11 @@
 这种特性意味着Objective-C不仅需要一个编译器，还需要一个运行时系统来执行编译的代码。对于Objective-C来说，这个运行时系统就像一个操作系统一样：它让所有的工作可以正">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Runtime基本介绍">
-<meta property="og:url" content="http://jimmypeng.cn/2016/09/22/Runtime基本介绍/index.html">
+<meta property="og:url" content="http://jimmypeng.cn/2016/09/22/Runtimebase/index.html">
 <meta property="og:site_name" content="J&M">
 <meta property="og:description" content="Objective-C语言是一门动态语言，它将很多静态语言在编译和链接时期做的事放到了运行时来处理。这种动态语言的优势在于：我们写代码时更具灵活性，如我们可以把消息转发给我们想要的对象，或者随意交换一个方法的实现等。
 这种特性意味着Objective-C不仅需要一个编译器，还需要一个运行时系统来执行编译的代码。对于Objective-C来说，这个运行时系统就像一个操作系统一样：它让所有的工作可以正">
-<meta property="og:updated_time" content="2016-09-22T13:19:59.000Z">
+<meta property="og:updated_time" content="2016-09-22T14:43:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Runtime基本介绍">
 <meta name="twitter:description" content="Objective-C语言是一门动态语言，它将很多静态语言在编译和链接时期做的事放到了运行时来处理。这种动态语言的优势在于：我们写代码时更具灵活性，如我们可以把消息转发给我们想要的对象，或者随意交换一个方法的实现等。
@@ -117,12 +117,12 @@
 
 
 
-  <link rel="canonical" href="http://jimmypeng.cn/2016/09/22/Runtime基本介绍/"/>
+  <link rel="canonical" href="http://jimmypeng.cn/2016/09/22/Runtimebase/"/>
 
   <title> Runtime基本介绍 | J&M </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans,en,default">
 
   
 
@@ -185,9 +185,9 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-首页"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -195,29 +195,9 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-分类"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Kategorien
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-关于"></i> <br />
-            
-            Über
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-归档"></i> <br />
-            
-            Archiv
+            分类
           </a>
         </li>
       
@@ -225,9 +205,19 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-标签"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -280,7 +270,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-09-22T16:07:29+08:00" content="2016-09-22">
               2016-09-22
             </time>
@@ -292,7 +282,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
@@ -311,8 +301,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/22/Runtime基本介绍/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/22/Runtime基本介绍/" itemprop="commentsCount"></span>
+                <a href="/2016/09/22/Runtimebase/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/22/Runtimebase/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -339,16 +329,14 @@
 <p>这种特性意味着<code>Objective-C</code>不仅需要一个编译器，还需要一个运行时系统来执行编译的代码。对于<code>Objective-C</code>来说，这个运行时系统就像一个操作系统一样：它让所有的工作可以正常的运行。这个运行时系统即Objc <code>Runtime</code>。Objc <code>Runtime</code>其实是一个<code>Runtime</code>库，它基本上是用C和汇编写的，这个库使得C语言有了面向对象的能力。<br><a id="more"></a></p>
 <p><strong>Runtime库主要做下面几件事：</strong><br><strong>封装</strong>：在这个库中，对象可以用C语言中的结构体表示，而方法可以用C函数来实现，另外再加上了一些额外的特性。这些结构体和函数被<code>runtime</code>函数封装后，我们就可以在程序运行时创建，检查，修改类、对象和它们的方法了。</p>
 <p><strong>找出方法的最终执行代码</strong>：当程序执行<code>[object doSomething]</code>时，会向消息接收者(object)发送一条消息(doSomething)，<code>runtime</code>会根据消息接收者是否能响应该消息而做出不同的反应。</p>
-<p>###基本解释</p>
-<ul>
+<h3 id="基本解释"><a href="#基本解释" class="headerlink" title="基本解释"></a>基本解释</h3><ul>
 <li>Runtime 是一套比较底层的纯C语言API, 它是OC的幕后工作者</li>
 <li>我们平时写的OC代码在运行时都会编译器转为runtime的C语言代码</li>
 <li>其中最主要的是消息机制OC的函数调用成为消息发送 属于动态调用过程 在编译的时候并不能决定真正调用哪个函数</li>
 <li>事实证明, 在编译阶段，OC可以调用任何函数，即使这个函数并未实现，只要申明过就不会报错</li>
 <li>而C语言在编译阶段就会报错 只有在真正运行的时候才会根据函数的名称找到对应的函数来调用。</li>
 </ul>
-<p>##实际用法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div></pre></td><td class="code"><pre><div class="line">#import &quot;ViewController.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line">#import &lt;objc/message.h&gt;</div><div class="line">#import &quot;Person.h&quot;</div><div class="line">#import &quot;NSObject+my.h&quot;</div><div class="line"></div><div class="line"></div><div class="line">@interface ViewController ()</div><div class="line">@property (weak, nonatomic) IBOutlet UIImageView *phoneImg;</div><div class="line"></div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@implementation ViewController</div><div class="line"></div><div class="line">- (void)viewDidLoad &#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    </div><div class="line">    /******************1.消息发送*******************/</div><div class="line">    </div><div class="line">    Person *p = [Person new];</div><div class="line">//    [p run];</div><div class="line">    objc_msgSend(p,@selector(run));</div><div class="line">    </div><div class="line">    objc_msgSend([Person class], @selector(run));</div><div class="line"></div><div class="line">    /******************2.方法交换*******************/</div><div class="line">    self.phoneImg.image = [UIImage imageNamed:@&quot;banner&quot;];</div><div class="line">    </div><div class="line">    /******************3.获取实例变量*******************/</div><div class="line">    </div><div class="line">    //参数1:你要获取的类,参数2:数量指针</div><div class="line">    </div><div class="line">    unsigned int iVarCount;</div><div class="line">    </div><div class="line">    Ivar *iVarList = class_copyIvarList([Person class], &amp;iVarCount);</div><div class="line">    </div><div class="line">    for (int i = 0; i &lt; iVarCount; i++) &#123;</div><div class="line">        </div><div class="line">        Ivar aVar = iVarList[i];</div><div class="line">        </div><div class="line">        NSLog(@&quot;%s&quot;,ivar_getName(aVar));</div><div class="line">    &#125;</div><div class="line">    /******************4.获取对象方法*******************/</div><div class="line">    unsigned int methodCount;</div><div class="line">    </div><div class="line">    Method *methodList = class_copyMethodList([Person class], &amp;methodCount);</div><div class="line">    </div><div class="line">    for (int i = 0; i &lt; methodCount; i++) &#123;</div><div class="line">        </div><div class="line">        Method aMethod = methodList[i];</div><div class="line">        </div><div class="line">        SEL methodSel = method_getName(aMethod);</div><div class="line">        </div><div class="line">        NSLog(@&quot;%@&quot;,NSStringFromSelector(methodSel));</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************5.动态创建类,添加实例变量*******************/</div><div class="line">    </div><div class="line">    //创建一个类 参数1:父类 参数2:你要创建的类名 参数3:</div><div class="line">     Class MyClass = objc_allocateClassPair([Person class], &quot;MyClass&quot;, 0);</div><div class="line">    </div><div class="line">    </div><div class="line">    //添加实例变量  参数1:要往哪个类添加, 参数2:变量名 参数3:变量大小 参数4:对齐方式-传0 参数5:类型编码(要去文档查看)</div><div class="line">    </div><div class="line">    </div><div class="line">    if (class_addIvar(MyClass, &quot;_city&quot;, sizeof(NSString *), 0, &quot;@&quot;)) &#123;</div><div class="line">        NSLog(@&quot;变量添加成功&quot;);</div><div class="line">        </div><div class="line">        </div><div class="line">        id myP = [[MyClass alloc]init];//使用id类型来接收</div><div class="line">        </div><div class="line">        //赋值</div><div class="line">        [myP setValue:@&quot;广州&quot; forKey:@&quot;_city&quot;];</div><div class="line">        </div><div class="line">        //取出</div><div class="line">        NSLog(@&quot;%@&quot;,[myP valueForKey:@&quot;_city&quot;]);</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************6.动态创建类,添加对象方法*******************/</div><div class="line">    </div><div class="line">    //添加对象方法  参数1:要往哪个类添加, 参数2:方法选择器 参数3:实现 参数4:实现的函数类型编码(要去文档查看)</div><div class="line">    </div><div class="line">    if (class_addMethod(MyClass, @selector(aMethod:), (IMP)aMethod_IMP, &quot;v@:@&quot;)) &#123;</div><div class="line">        </div><div class="line">        NSLog(@&quot;方法添加成功&quot;);</div><div class="line">        </div><div class="line">        id myP = [[MyClass alloc]init];//使用id类型来接收</div><div class="line">        </div><div class="line">        [myP aMethod:@&quot;哈哈&quot;];</div><div class="line">        </div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************7.分类添加属性*******************/</div><div class="line">    </div><div class="line">    NSObject *obj = [NSObject new];</div><div class="line"></div><div class="line">    obj.myName = @&quot;aNema&quot;;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%@&quot;,obj.myName);</div><div class="line">    </div><div class="line">    </div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">//方法实现</div><div class="line">void aMethod_IMP(id self,SEL _cmd,NSString * str)&#123;</div><div class="line"></div><div class="line">    NSLog(@&quot;%s = %@&quot;,__func__,str);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">//OC里的方法</div><div class="line">- (void)aMethod:(NSString *)str&#123;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%s&quot;,__func__);</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
+<h2 id="实际用法"><a href="#实际用法" class="headerlink" title="实际用法"></a>实际用法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div></pre></td><td class="code"><pre><div class="line">#import &quot;ViewController.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line">#import &lt;objc/message.h&gt;</div><div class="line">#import &quot;Person.h&quot;</div><div class="line">#import &quot;NSObject+my.h&quot;</div><div class="line"></div><div class="line"></div><div class="line">@interface ViewController ()</div><div class="line">@property (weak, nonatomic) IBOutlet UIImageView *phoneImg;</div><div class="line"></div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@implementation ViewController</div><div class="line"></div><div class="line">- (void)viewDidLoad &#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    </div><div class="line">    /******************1.消息发送*******************/</div><div class="line">    </div><div class="line">    Person *p = [Person new];</div><div class="line">//    [p run];</div><div class="line">    objc_msgSend(p,@selector(run));</div><div class="line">    </div><div class="line">    objc_msgSend([Person class], @selector(run));</div><div class="line"></div><div class="line">    /******************2.方法交换*******************/</div><div class="line">    self.phoneImg.image = [UIImage imageNamed:@&quot;banner&quot;];</div><div class="line">    </div><div class="line">    /******************3.获取实例变量*******************/</div><div class="line">    </div><div class="line">    //参数1:你要获取的类,参数2:数量指针</div><div class="line">    </div><div class="line">    unsigned int iVarCount;</div><div class="line">    </div><div class="line">    Ivar *iVarList = class_copyIvarList([Person class], &amp;iVarCount);</div><div class="line">    </div><div class="line">    for (int i = 0; i &lt; iVarCount; i++) &#123;</div><div class="line">        </div><div class="line">        Ivar aVar = iVarList[i];</div><div class="line">        </div><div class="line">        NSLog(@&quot;%s&quot;,ivar_getName(aVar));</div><div class="line">    &#125;</div><div class="line">    /******************4.获取对象方法*******************/</div><div class="line">    unsigned int methodCount;</div><div class="line">    </div><div class="line">    Method *methodList = class_copyMethodList([Person class], &amp;methodCount);</div><div class="line">    </div><div class="line">    for (int i = 0; i &lt; methodCount; i++) &#123;</div><div class="line">        </div><div class="line">        Method aMethod = methodList[i];</div><div class="line">        </div><div class="line">        SEL methodSel = method_getName(aMethod);</div><div class="line">        </div><div class="line">        NSLog(@&quot;%@&quot;,NSStringFromSelector(methodSel));</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************5.动态创建类,添加实例变量*******************/</div><div class="line">    </div><div class="line">    //创建一个类 参数1:父类 参数2:你要创建的类名 参数3:</div><div class="line">     Class MyClass = objc_allocateClassPair([Person class], &quot;MyClass&quot;, 0);</div><div class="line">    </div><div class="line">    </div><div class="line">    //添加实例变量  参数1:要往哪个类添加, 参数2:变量名 参数3:变量大小 参数4:对齐方式-传0 参数5:类型编码(要去文档查看)</div><div class="line">    </div><div class="line">    </div><div class="line">    if (class_addIvar(MyClass, &quot;_city&quot;, sizeof(NSString *), 0, &quot;@&quot;)) &#123;</div><div class="line">        NSLog(@&quot;变量添加成功&quot;);</div><div class="line">        </div><div class="line">        </div><div class="line">        id myP = [[MyClass alloc]init];//使用id类型来接收</div><div class="line">        </div><div class="line">        //赋值</div><div class="line">        [myP setValue:@&quot;广州&quot; forKey:@&quot;_city&quot;];</div><div class="line">        </div><div class="line">        //取出</div><div class="line">        NSLog(@&quot;%@&quot;,[myP valueForKey:@&quot;_city&quot;]);</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************6.动态创建类,添加对象方法*******************/</div><div class="line">    </div><div class="line">    //添加对象方法  参数1:要往哪个类添加, 参数2:方法选择器 参数3:实现 参数4:实现的函数类型编码(要去文档查看)</div><div class="line">    </div><div class="line">    if (class_addMethod(MyClass, @selector(aMethod:), (IMP)aMethod_IMP, &quot;v@:@&quot;)) &#123;</div><div class="line">        </div><div class="line">        NSLog(@&quot;方法添加成功&quot;);</div><div class="line">        </div><div class="line">        id myP = [[MyClass alloc]init];//使用id类型来接收</div><div class="line">        </div><div class="line">        [myP aMethod:@&quot;哈哈&quot;];</div><div class="line">        </div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /******************7.分类添加属性*******************/</div><div class="line">    </div><div class="line">    NSObject *obj = [NSObject new];</div><div class="line"></div><div class="line">    obj.myName = @&quot;aNema&quot;;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%@&quot;,obj.myName);</div><div class="line">    </div><div class="line">    </div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">//方法实现</div><div class="line">void aMethod_IMP(id self,SEL _cmd,NSString * str)&#123;</div><div class="line"></div><div class="line">    NSLog(@&quot;%s = %@&quot;,__func__,str);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">//OC里的方法</div><div class="line">- (void)aMethod:(NSString *)str&#123;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%s&quot;,__func__);</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
 <p>###UIImage分类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">//</div><div class="line">//  UIImage+my.m</div><div class="line">//  01-runtime</div><div class="line">//</div><div class="line">//  Created by iOS on 15/12/24.</div><div class="line">//  Copyright © 2015年 iOS. All rights reserved.</div><div class="line">//</div><div class="line"></div><div class="line">#import &quot;UIImage+my.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line"></div><div class="line">@implementation UIImage (my)</div><div class="line"></div><div class="line">+ (void)load&#123;</div><div class="line">    </div><div class="line">    //1.获取旧方法</div><div class="line">    </div><div class="line">    Method imageNameM = class_getClassMethod(self, @selector(imageNamed:));</div><div class="line">    </div><div class="line">    //2.获取新方法</div><div class="line">    Method imageWithNameM = class_getClassMethod(self, @selector(imageWithName:));</div><div class="line">    </div><div class="line">    //3.交换</div><div class="line">    </div><div class="line">    method_exchangeImplementations(imageNameM, imageWithNameM);</div><div class="line">    </div><div class="line">    </div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//+ (UIImage *)imageNamed:(NSString *)name&#123;</div><div class="line">//    </div><div class="line">//&#125;</div><div class="line"></div><div class="line"></div><div class="line">+ (UIImage *)imageWithName:(NSString *)name&#123;</div><div class="line">    </div><div class="line">    NSLog(@&quot;%s&quot;,__func__);</div><div class="line">    </div><div class="line">    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) &#123;</div><div class="line">        </div><div class="line">        name = [name stringByAppendingString:@&quot;_iPad&quot;];</div><div class="line">        </div><div class="line">    &#125;else &#123;</div><div class="line">        name = [name stringByAppendingString:@&quot;_iPhone&quot;];</div><div class="line">    &#125;</div><div class="line">    </div><div class="line"></div><div class="line">    return [self imageWithName:name];</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure></p>
 <p>###NSObject分类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">//</div><div class="line">//  NSObject+my.m</div><div class="line">//  01-runtime</div><div class="line">//</div><div class="line">//  Created by iOS on 15/12/24.</div><div class="line">//  Copyright © 2015年 iOS. All rights reserved.</div><div class="line">//</div><div class="line"></div><div class="line">#import &quot;NSObject+my.h&quot;</div><div class="line">#import &lt;objc/runtime.h&gt;</div><div class="line"></div><div class="line">@implementation NSObject (my)</div><div class="line"></div><div class="line">static const void *myNameKey = &quot;myNameKey&quot;;</div><div class="line"></div><div class="line">- (void)setMyName:(NSString *)myName&#123;</div><div class="line">    </div><div class="line">//    [self setValue:myName forKey:@&quot;myName&quot;];</div><div class="line">    </div><div class="line">    //设置关联  参数1:要关联的对象 参数2:绑定的key 参数3:这个key要关联的值 参数4:要使用的策略</div><div class="line">    objc_setAssociatedObject(self, myNameKey, myName, OBJC_ASSOCIATION_COPY_NONATOMIC);</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line">- (NSString *)myName&#123;</div><div class="line">    </div><div class="line">//    return [self valueForKey:@&quot;myName&quot;];</div><div class="line">    return objc_getAssociatedObject(self, myNameKey);</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure></p>
 
@@ -376,15 +364,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/22/iOS集成极光推送/" rel="next" title="iOS集成极光推送">
-                <i class="fa fa-chevron-left"></i> iOS集成极光推送
+              <a href="/2016/01/11/coredata/" rel="next" title="Coredata">
+                <i class="fa fa-chevron-left"></i> Coredata
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/22/HTML5基础介绍/" rel="prev" title="HTML5基础介绍">
+              <a href="/2016/09/22/HTML5base/" rel="prev" title="HTML5基础介绍">
                 HTML5基础介绍 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -412,8 +400,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/22/Runtime基本介绍/"
-           data-title="Runtime基本介绍" data-url="http://jimmypeng.cn/2016/09/22/Runtime基本介绍/">
+      <div class="ds-thread" data-thread-key="2016/09/22/Runtimebase/"
+           data-title="Runtime基本介绍" data-url="http://jimmypeng.cn/2016/09/22/Runtimebase/">
       </div>
     
   </div>
@@ -439,10 +427,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -453,13 +441,13 @@
                src="http://upload.jianshu.io/users/upload_avatars/1115674/6322d5678682.jpg"
                alt="Jimmy Peng" />
           <p class="site-author-name" itemprop="name">Jimmy Peng</p>
-          <p class="site-description motion-element" itemprop="description">jimmypeng | ios blog | html5</p>
+          <p class="site-description motion-element" itemprop="description">JimmyPeng | iOS Blog | html5</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">Artikel</span>
+            <a href="/">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
@@ -467,7 +455,7 @@
             <div class="site-state-item site-state-categories">
               <a href="/categories">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
@@ -479,6 +467,35 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/JimmyPeng4iOS" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.weibo.com/JimmyPeng4iOS" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/users/53845c6b43dc/top_articles" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
           
         </div>
 
@@ -497,7 +514,7 @@
               
             
             
-              <p class="post-toc-empty">Dieser Artikel hat kein Inhaltsverzeichnis</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本解释"><span class="nav-number">1.</span> <span class="nav-text">基本解释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实际用法"><span class="nav-number"></span> <span class="nav-text">实际用法</span></a></div>
             
           </div>
         </section>
@@ -515,7 +532,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2010 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -524,15 +541,15 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
-</div>
+
 
         
 
