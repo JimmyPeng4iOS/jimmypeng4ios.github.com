@@ -100,7 +100,7 @@ Core Data 是一个模型层的技术。帮助建立代表程序状态的模型�
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-f7f81e014bd2e3d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-45d75517f3ba3970.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-7f84be1adcaa5ddd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-09-22T14:45:48.000Z">
+<meta property="og:updated_time" content="2016-09-24T08:06:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Coredata">
 <meta name="twitter:description" content="一. CoreData 是什么?
@@ -382,8 +382,7 @@ Core Data 是一个模型层的技术。帮助建立代表程序状态的模型�
 <li>Core Data 框架最早出现在 Mac OS X 10.4 Tiger 与 iOS 3.0 系统,经过成千上万的应用程序以及数以百万用户的反复的验证,Core Data 确实已经是一套非常成熟的框架</li>
 <li>CoreData利用了Objective-C语言和运行时,巧妙地集成了CoreFoundation框架。是 一个易于使用的框架,不仅可以优雅地<strong>管理对象图</strong>,而且在<strong>内存管理方面表现异常优异</strong></li>
 </ul>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>###二. 怎么学习CoreData</p>
-<ul>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h3 id="二-怎么学习CoreData"><a href="#二-怎么学习CoreData" class="headerlink" title="二. 怎么学习CoreData"></a>二. 怎么学习CoreData</h3><ul>
 <li>第一眼看到 Core Data 令人生畏的<strong>复杂</strong>架构关系,很多人都会有无从下手的感觉. </li>
 <li>可是, 一旦理解了架构图中各个<strong>部件的组成</strong>及<strong>相互之间的关系</strong>,就能体会到 Core Data API 的简洁和直观了</li>
 <li><strong>Core Data stack(堆栈</strong>):如果能够理解 Core Data stack 中的<strong>各个成员所扮演的角色</strong>,那么再使用Core Data 就不会感觉到困难了</li>
@@ -391,7 +390,7 @@ Core Data 是一个模型层的技术。帮助建立代表程序状态的模型�
 <li>Core Data 不是应用程序的数据库,也不是将数据持久化保存到数据库的 API。<strong>Core Data 是一个用于管理对象图的框架</strong>。Core Data 可以把<strong>对象图写入磁盘</strong>从而持久化保存,但是这不是框架的主要目标.</li>
 </ul>
 <hr>
-<p>###三. Core Data stack<br>Core Data stack 是 Core Data 的核心,由一组 Core Data 核心对象组成</p>
+<h3 id="三-Core-Data-stack"><a href="#三-Core-Data-stack" class="headerlink" title="三. Core Data stack"></a>三. Core Data stack</h3><p>Core Data stack 是 Core Data 的核心,由一组 Core Data 核心对象组成</p>
 <ul>
 <li><strong>NSManagedObjectContext</strong> 对象管理上下文: 负责管理模型的对象的集合</li>
 <li><strong>NSManagedObjectModel</strong> 被管理的对象模型: 负责管理对象模型</li>
@@ -408,10 +407,9 @@ Core Data 是一个模型层的技术。帮助建立代表程序状态的模型�
 <p>常见的使用解决方案:</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1115674-44d722eecf63d855.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解决方案"></p>
 <hr>
-<p>###四. 创建CoreDataStack<br>根据 CoreDataStack 示意图,将关系以代码的形式组织起来 !<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">// 实例化数据模型 </div><div class="line">NSURL *modelURL = [[NSBundle mainBundle] URLForResource:modelNamewithExtension:@&quot;momd&quot;];</div><div class="line">NSManagedObjectModel *model = [[NSManagedObjectModel alloc]initWithContentsOfURL:modelURL];</div><div class="line"></div><div class="line">// 实例化持久化储存</div><div class="line"> NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];</div><div class="line"></div><div class="line">NSURL *dbURL = [[[NSFileManager defaultManager]URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask]lastObject];</div><div class="line"></div><div class="line">dbURL = [dbURL URLByAppendingPathComponent:dbName];[psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil</div><div class="line">URL:dbURL options:nil error:NULL];</div><div class="line"></div><div class="line">//  实例化上下文</div><div class="line">_managedObjectContext = [[NSManagedObjectContext alloc]initWithConcurrencyType:NSMainQueueConcurrencyType];</div><div class="line"></div><div class="line">[_managedObjectContext setPersistentStoreCoordinator:psc];</div></pre></td></tr></table></figure></p>
+<h3 id="四-创建CoreDataStack"><a href="#四-创建CoreDataStack" class="headerlink" title="四. 创建CoreDataStack"></a>四. 创建CoreDataStack</h3><p>根据 CoreDataStack 示意图,将关系以代码的形式组织起来 !<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">// 实例化数据模型 </div><div class="line">NSURL *modelURL = [[NSBundle mainBundle] URLForResource:modelNamewithExtension:@&quot;momd&quot;];</div><div class="line">NSManagedObjectModel *model = [[NSManagedObjectModel alloc]initWithContentsOfURL:modelURL];</div><div class="line"></div><div class="line">// 实例化持久化储存</div><div class="line"> NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];</div><div class="line"></div><div class="line">NSURL *dbURL = [[[NSFileManager defaultManager]URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask]lastObject];</div><div class="line"></div><div class="line">dbURL = [dbURL URLByAppendingPathComponent:dbName];[psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil</div><div class="line">URL:dbURL options:nil error:NULL];</div><div class="line"></div><div class="line">//  实例化上下文</div><div class="line">_managedObjectContext = [[NSManagedObjectContext alloc]initWithConcurrencyType:NSMainQueueConcurrencyType];</div><div class="line"></div><div class="line">[_managedObjectContext setPersistentStoreCoordinator:psc];</div></pre></td></tr></table></figure></p>
 <hr>
-<p>###[ 一些提示 ]</p>
-<blockquote>
+<h3 id="一些提示"><a href="#一些提示" class="headerlink" title="[ 一些提示 ]"></a>[ 一些提示 ]</h3><blockquote>
 <p>use scalar properties for primitive data type</p>
 </blockquote>
 <p>在 iOS5 和 OS X10.7 之前,scalar 不能自动生成,程序员必须自己添加 setter 和 getter 的实现</p>
@@ -420,15 +418,14 @@ Core Data 是一个模型层的技术。帮助建立代表程序状态的模型�
 </blockquote>
 <p>在 Objective-C 中,如果将某个属性实现为@dynamic,意味着告诉编译器不会在编译时确定这个属性的行为实现,因此不需要在编译期间对这个属性的 getter、setter 做检查.</p>
 <hr>
-<p>###五. CoreData 常见操作</p>
-<p>####5.1 新增记录:<br>使用 NSEntityDescription 来创建对象,赋值后使用相应的 context 保存即可</p>
+<h3 id="五-CoreData-常见操作"><a href="#五-CoreData-常见操作" class="headerlink" title="五. CoreData 常见操作"></a>五. CoreData 常见操作</h3><h4 id="5-1-新增记录"><a href="#5-1-新增记录" class="headerlink" title="5.1 新增记录:"></a>5.1 新增记录:</h4><p>使用 NSEntityDescription 来创建对象,赋值后使用相应的 context 保存即可</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1115674-f7f81e014bd2e3d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="新增"></p>
-<p>####5.2 删除记录:<br>使用 context 的 deleteObject:删除被管理的模型对象后保存即可</p>
+<h4 id="5-2-删除记录"><a href="#5-2-删除记录" class="headerlink" title="5.2 删除记录:"></a>5.2 删除记录:</h4><p>使用 context 的 deleteObject:删除被管理的模型对象后保存即可</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1115674-45d75517f3ba3970.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="删除记录"></p>
-<p>####5.3 修改记录:<br>直接修改模型对象保存即可</p>
+<h4 id="5-3-修改记录"><a href="#5-3-修改记录" class="headerlink" title="5.3 修改记录:"></a>5.3 修改记录:</h4><p>直接修改模型对象保存即可</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1115674-7f84be1adcaa5ddd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改记录"></p>
-<p>####5.4 查询记录<br>对使用 CoreData 进行存储的数据进行一定条件的查询后取出来使用</p>
-<p>#####5.4.1 谓词(is)—NSPredicate<br>作用:判断条件表达式的求值返回真或假的过程</p>
+<h4 id="5-4-查询记录"><a href="#5-4-查询记录" class="headerlink" title="5.4 查询记录"></a>5.4 查询记录</h4><p>对使用 CoreData 进行存储的数据进行一定条件的查询后取出来使用</p>
+<h5 id="5-4-1-谓词-is-—NSPredicate"><a href="#5-4-1-谓词-is-—NSPredicate" class="headerlink" title="5.4.1 谓词(is)—NSPredicate"></a>5.4.1 谓词(is)—NSPredicate</h5><p>作用:判断条件表达式的求值返回真或假的过程</p>
 <p>使用步骤:</p>
 <ul>
 <li>定义 NSPredicate 对象并指定条件</li>
@@ -468,8 +465,7 @@ Core Data 是一个模型层的技术。帮助建立代表程序状态的模型�
 <li><p>合计操作<br>ANY SOME: 指定下列表达式中的任意元素<br>例如 <code>ANY children.age &lt; 18</code><br>ALL: 指定下列表达式中的所有元素<br>例如 <code>ALL children.age &lt; 18</code><br>NONE: 指定下列表达式中没有的元素<br>例如 <code>NONE children.age &lt; 18</code><br>在逻辑上等于NOT(ANY …)<br>IN:等于 SQL的<code>IN</code>操作,左边的表达必须出现在与右边指定的集合中<br>例如:<code>name IN { &#39;Ben&#39;,&#39;Melissa&#39;, &#39;Nick&#39; }</code></p>
 </li>
 </ol>
-<p>####提示 :</p>
-<ol>
+<h4 id="提示"><a href="#提示" class="headerlink" title="提示 :"></a>提示 :</h4><ol>
 <li>谓词中的匹配指令关键字通常使用大写字母</li>
 <li>谓词中可以使用格式字符串</li>
 <li>如果通过对象的<code>key path</code> 指定匹配条件,需要使用 %K</li>
@@ -499,16 +495,16 @@ Core Data 是一个模型层的技术。帮助建立代表程序状态的模型�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/27/fmdb/" rel="next" title="SQLite数据库框架--FMDB">
-                <i class="fa fa-chevron-left"></i> SQLite数据库框架--FMDB
+              <a href="/2015/12/30/JMEmoticonDemo/" rel="next" title="JMEmoticonDemo--自定义表情键盘">
+                <i class="fa fa-chevron-left"></i> JMEmoticonDemo--自定义表情键盘
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/22/Runtimebase/" rel="prev" title="Runtime基本介绍">
-                Runtime基本介绍 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/02/15/ios6789/" rel="prev" title="iOS6、7、8、9新特性汇总和适配说明">
+                iOS6、7、8、9新特性汇总和适配说明 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -581,7 +577,7 @@ Core Data 是一个模型层的技术。帮助建立代表程序状态的模型�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -595,6 +591,13 @@ Core Data 是一个模型层的技术。帮助建立代表程序状态的模型�
             </div>
           
 
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
           
 
         </nav>
@@ -649,7 +652,7 @@ Core Data 是一个模型层的技术。帮助建立代表程序状态的模型�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-CoreData-是什么"><span class="nav-number">1.</span> <span class="nav-text">一. CoreData 是什么?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词的条件指令"><span class="nav-number">0.1.</span> <span class="nav-text">谓词的条件指令</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-CoreData-是什么"><span class="nav-number">1.</span> <span class="nav-text">一. CoreData 是什么?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二-怎么学习CoreData"><span class="nav-number">1.</span> <span class="nav-text">二. 怎么学习CoreData</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-Core-Data-stack"><span class="nav-number">2.</span> <span class="nav-text">三. Core Data stack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-创建CoreDataStack"><span class="nav-number">3.</span> <span class="nav-text">四. 创建CoreDataStack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些提示"><span class="nav-number">4.</span> <span class="nav-text">[ 一些提示 ]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五-CoreData-常见操作"><span class="nav-number">5.</span> <span class="nav-text">五. CoreData 常见操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-新增记录"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 新增记录:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-删除记录"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 删除记录:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-修改记录"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 修改记录:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-查询记录"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 查询记录</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-4-1-谓词-is-—NSPredicate"><span class="nav-number">5.4.1.</span> <span class="nav-text">5.4.1 谓词(is)—NSPredicate</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#谓词的条件指令"><span class="nav-number">5.5.</span> <span class="nav-text">谓词的条件指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提示"><span class="nav-number">5.6.</span> <span class="nav-text">提示 :</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
