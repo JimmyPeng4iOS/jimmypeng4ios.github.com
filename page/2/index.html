@@ -211,11 +211,21 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/abo" rel="section">
+          <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -269,6 +279,756 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/21/pushRTMP/" itemprop="url">
+                  iOS直播-基于RTMP的视频推送
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-21T15:07:29+08:00" content="2016-05-21">
+              2016-05-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/21/pushRTMP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/21/pushRTMP/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>所谓的视频推送就是把摄像头和麦克风捕获到视频和音频推送到直播服务器上.<br>我们这里使用推送协议是<strong>RTMP</strong>协议.<br>腾讯直播平台,阿里直播平台,百度直播平台提供均为RTMP的推流和HLS/RTMP等拉流.</p>
+<p>我们使用<code>GDLiveStreaming</code>来实现iOS端的视频推送</p>
+<h3 id="GDLiveStreaming简介"><a href="#GDLiveStreaming简介" class="headerlink" title="GDLiveStreaming简介"></a>GDLiveStreaming简介</h3><p><code>GDLiveStreaming</code>是对开源框架<code>VideoCore</code>简单封装.提供视频录制,推送与存储. 你可以下载<code>GDLiveStreaming</code>源码来学习和研究.<br>我们这里讲解如何通过`GDLiveStreaming实现RTMP的推流</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/21/pushRTMP/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/15/ios6789/" itemprop="url">
+                  iOS6、7、8、9新特性汇总和适配说明
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-15T09:07:29+08:00" content="2016-02-15">
+              2016-02-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/15/ios6789/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/15/ios6789/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="iOS6新特性"><a href="#iOS6新特性" class="headerlink" title="iOS6新特性"></a>iOS6新特性</h1><hr>
+<h5 id="一、关于内存警告"><a href="#一、关于内存警告" class="headerlink" title="一、关于内存警告"></a>一、关于内存警告</h5><p>ios6中废除了viewDidUnload，viewWillUnload这两个系统回调，收到内存警告时在didReceiveMemoryWarning中进行相关的处理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">- (void)viewDidUnload &#123;</div><div class="line">    [super viewDidUnload];</div><div class="line">    // 处理 ios6 以下的系统内存警告系统回调消息</div><div class="line">&#125;</div><div class="line"> </div><div class="line">// 这里处理ios6 的内存警告</div><div class="line">- (void)didReceiveMemoryWarning &#123;</div><div class="line">    [super didReceiveMemoryWarning];</div><div class="line">    </div><div class="line">    float sysVer = [[[UIDevice currentDevice] systemVersion] floatValue];</div><div class="line">    //ios6 的特殊处理</div><div class="line">    </div><div class="line">    if (sysVer &gt;= 6.0f) &#123;</div><div class="line">        // 保证 invisible,  因为即使在当前界面也会收到系统回调</div><div class="line">        if (self.view.window == nil) &#123;</div><div class="line">            //.......</div><div class="line">            // 做相关的释放操作</div><div class="line">            self.view = nil;   // 确保下次会重新加载</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/15/ios6789/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/11/coredata/" itemprop="url">
+                  Coredata
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-11T23:07:29+08:00" content="2016-01-11">
+              2016-01-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/11/coredata/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/11/coredata/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="一-CoreData-是什么"><a href="#一-CoreData-是什么" class="headerlink" title="一. CoreData 是什么?"></a>一. CoreData 是什么?</h3><ul>
+<li>Core Data 是 iOS SDK 里的一个很强大的<strong>框架</strong>,允许程序员以<strong>面向对象的方式储存和管理数据</strong>。使用 Core Data 框架,程序员可以很轻松有效地通过面向对象的接口管理数据</li>
+<li><strong>Core Data 是一个模型层的技术</strong>。帮助建立代表程序状态的模型层,Core Data 也是一种 持久化技术,能将模型对象的状态持久化到磁盘,但它最重要的特点是: <strong> Core Data 不仅是一个加载、保存数据的框架,它还能和内存中的数据很好的共事</strong></li>
+<li>在数据操作过程中, <strong>无需编写任何SQL语句</strong></li>
+<li>Core Data 使用包括<strong>实体</strong>和<strong>实体间</strong>关系,以及查找符合某些条件实体的请求等内容</li>
+<li>开发者可以在<strong>纯对象层</strong>上查找与管理这些数据,而不必担心存储和查找的实现细节</li>
+<li>Core Data 框架最早出现在 Mac OS X 10.4 Tiger 与 iOS 3.0 系统,经过成千上万的应用程序以及数以百万用户的反复的验证,Core Data 确实已经是一套非常成熟的框架</li>
+<li>CoreData利用了Objective-C语言和运行时,巧妙地集成了CoreFoundation框架。是 一个易于使用的框架,不仅可以优雅地<strong>管理对象图</strong>,而且在<strong>内存管理方面表现异常优异</strong></li>
+</ul>
+<h2 id=""><a href="#" class="headerlink" title=""></a>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/11/coredata/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/30/JMEmoticonDemo/" itemprop="url">
+                  JMEmoticonDemo--自定义表情键盘
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-30T16:07:29+08:00" content="2015-12-30">
+              2015-12-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/30/JMEmoticonDemo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/JMEmoticonDemo/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="JMEmoticonDemo"><a href="#JMEmoticonDemo" class="headerlink" title="JMEmoticonDemo"></a>JMEmoticonDemo</h1><h5 id="JMEmoticonDemo-是本人-Jimmy-使用Swift语言自定义的一个表情键盘。-基于新浪的表情包来实现表情在文本框的显示，实现表情的输入，可方便的整合入app-简单易用。"><a href="#JMEmoticonDemo-是本人-Jimmy-使用Swift语言自定义的一个表情键盘。-基于新浪的表情包来实现表情在文本框的显示，实现表情的输入，可方便的整合入app-简单易用。" class="headerlink" title="JMEmoticonDemo 是本人 Jimmy 使用Swift语言自定义的一个表情键盘。 基于新浪的表情包来实现表情在文本框的显示，实现表情的输入，可方便的整合入app , 简单易用。"></a>JMEmoticonDemo 是本人 Jimmy 使用Swift语言自定义的一个表情键盘。 基于新浪的表情包来实现表情在文本框的显示，实现表情的输入，可方便的整合入app , 简单易用。</h5><hr>
+<h5 id="Github地址"><a href="#Github地址" class="headerlink" title="Github地址:"></a>Github地址:</h5><p><a href="https://github.com/JimmyPeng4iOS/JMEmoticon">https://github.com/JimmyPeng4iOS/JMEmoticon</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/30/JMEmoticonDemo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/30/JMWaterFlow/" itemprop="url">
+                  JMWaterFlow -- 快速布局瀑布流
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-30T16:07:29+08:00" content="2015-12-30">
+              2015-12-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/30/JMWaterFlow/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/JMWaterFlow/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="JMWaterFlow"><a href="#JMWaterFlow" class="headerlink" title="JMWaterFlow"></a>JMWaterFlow</h1><h5 id="JMWaterFlow-是本人-Jimmy-使用Swift语言对常见的-瀑布流-布局做的封装。-它使用UICollectionView来布局瀑布流，通过自定义layout布局来实现，简单易用。"><a href="#JMWaterFlow-是本人-Jimmy-使用Swift语言对常见的-瀑布流-布局做的封装。-它使用UICollectionView来布局瀑布流，通过自定义layout布局来实现，简单易用。" class="headerlink" title="JMWaterFlow 是本人 Jimmy 使用Swift语言对常见的 瀑布流 布局做的封装。 它使用UICollectionView来布局瀑布流，通过自定义layout布局来实现，简单易用。"></a>JMWaterFlow 是本人 Jimmy 使用Swift语言对常见的 <em>瀑布流</em> 布局做的封装。 它使用UICollectionView来布局瀑布流，通过自定义layout布局来实现，简单易用。</h5><hr>
+<h5 id="Github地址"><a href="#Github地址" class="headerlink" title="Github地址:"></a>Github地址:</h5><p><a href="https://github.com/JimmyPeng4iOS/JMWaterFlow">https://github.com/JimmyPeng4iOS/JMWaterFlow</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/30/JMWaterFlow/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/28/JMpickerView/" itemprop="url">
+                  JMpickerView -- 控制器切换框架
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-28T16:07:29+08:00" content="2015-12-28">
+              2015-12-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/28/JMpickerView/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/JMpickerView/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="JMpickerView"><a href="#JMpickerView" class="headerlink" title="JMpickerView"></a>JMpickerView</h1><h5 id="JMpickerView-是本人-Jimmy-使用Objective-C语言对子控制器间平滑切换封装的一个框架。-基于UIViewController的容器属性，通过添加子容器-可平滑高效的切换界面-同时保证只存在一个控制器-其他控制器在移出控制器时进行了缓存和销毁-简单易用-效率高。"><a href="#JMpickerView-是本人-Jimmy-使用Objective-C语言对子控制器间平滑切换封装的一个框架。-基于UIViewController的容器属性，通过添加子容器-可平滑高效的切换界面-同时保证只存在一个控制器-其他控制器在移出控制器时进行了缓存和销毁-简单易用-效率高。" class="headerlink" title="JMpickerView 是本人 Jimmy 使用Objective-C语言对子控制器间平滑切换封装的一个框架。 基于UIViewController的容器属性，通过添加子容器,可平滑高效的切换界面,同时保证只存在一个控制器,其他控制器在移出控制器时进行了缓存和销毁, 简单易用,效率高。"></a>JMpickerView 是本人 Jimmy 使用<code>Objective-C</code>语言对子控制器间平滑切换封装的一个框架。 基于<code>UIViewController</code>的容器属性，通过添加子容器,可平滑高效的切换界面,同时保证只存在一个控制器,其他控制器在移出控制器时进行了缓存和销毁, 简单易用,效率高。</h5><hr>
+<h5 id="Github地址"><a href="#Github地址" class="headerlink" title="Github地址:"></a>Github地址:</h5><p><a href="https://github.com/JimmyPeng4iOS/JMPickerView">https://github.com/JimmyPeng4iOS/JMPickerView</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/28/JMpickerView/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -824,7 +1584,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -832,7 +1592,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -840,10 +1600,10 @@
 
           
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">4</span>
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -907,7 +1667,7 @@
         <div class="copyright" >
   
   &copy;  2010 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

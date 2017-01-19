@@ -1,0 +1,982 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="wx," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="转载请注明出处, 谢谢! (～ o ～)Y1月9日，也就是今天，微信推出的“小程序”正式上线。“小程序”是一种无需安装，即可使用的手机“应用”。不需要像往常一样下载App，用户在微信中“用完即走”。目前，东方航空公司、美团大众点评、京东、新华社、今日头条、滴滴出行、摩拜单车等公司都已经各自研发并推出了“小程序”。
+对于我们开发者来说，在哪些地方使用，或者说这个东西怎么样，其实我们也不用过多去关注，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序开发 入门介绍 及个人demo">
+<meta property="og:url" content="http://jimmypeng.cn/2017/01/09/wx/index.html">
+<meta property="og:site_name" content="J&M">
+<meta property="og:description" content="转载请注明出处, 谢谢! (～ o ～)Y1月9日，也就是今天，微信推出的“小程序”正式上线。“小程序”是一种无需安装，即可使用的手机“应用”。不需要像往常一样下载App，用户在微信中“用完即走”。目前，东方航空公司、美团大众点评、京东、新华社、今日头条、滴滴出行、摩拜单车等公司都已经各自研发并推出了“小程序”。
+对于我们开发者来说，在哪些地方使用，或者说这个东西怎么样，其实我们也不用过多去关注，">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-9f9cfa222fd98af2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-ced529d2888fc2d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-59f1ce11cb650618.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-06673430ecef22fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-6df3db539d2cc31f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/360">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-760abca675b9bbb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/360">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-5add4124af703489.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-2e16b035a7820719.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1115674-125ebc5147767b5b.gif?imageMogr2/auto-orient/strip">
+<meta property="og:updated_time" content="2017-01-18T10:55:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="微信小程序开发 入门介绍 及个人demo">
+<meta name="twitter:description" content="转载请注明出处, 谢谢! (～ o ～)Y1月9日，也就是今天，微信推出的“小程序”正式上线。“小程序”是一种无需安装，即可使用的手机“应用”。不需要像往常一样下载App，用户在微信中“用完即走”。目前，东方航空公司、美团大众点评、京东、新华社、今日头条、滴滴出行、摩拜单车等公司都已经各自研发并推出了“小程序”。
+对于我们开发者来说，在哪些地方使用，或者说这个东西怎么样，其实我们也不用过多去关注，">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1115674-9f9cfa222fd98af2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6333177780112459000,
+      author: 'Jimmy'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://jimmypeng.cn/2017/01/09/wx/"/>
+
+  <title> 微信小程序开发 入门介绍 及个人demo | J&M </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans,en,default">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?15ff92f78d963406ab1037852d725472";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">J&M</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一个不会做实验的程序猿不是一个好厨子</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th-list"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-jm">
+          <a href="/jm" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
+            
+            J&M
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                微信小程序开发 入门介绍 及个人demo
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-09T09:57:29+08:00" content="2017-01-09">
+              2017-01-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/微信小程序/" itemprop="url" rel="index">
+                    <span itemprop="name">微信小程序</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/09/wx/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/09/wx/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="转载请注明出处-谢谢-～-o-～-Y"><a href="#转载请注明出处-谢谢-～-o-～-Y" class="headerlink" title="转载请注明出处, 谢谢! (～ o ～)Y"></a>转载请注明出处, 谢谢! (～ o ～)Y</h2><p>1月9日，也就是今天，微信推出的“小程序”正式上线。“小程序”是一种无需安装，即可使用的手机“应用”。不需要像往常一样下载App，用户在微信中“用完即走”。<br>目前，东方航空公司、美团大众点评、京东、新华社、今日头条、滴滴出行、摩拜单车等公司都已经各自研发并推出了“小程序”。</p>
+<p>对于我们开发者来说，在哪些地方使用，或者说这个东西怎么样，其实我们也不用过多去关注，我们只需要知道，老板让我们做，我们就得学<br>po主因为对微信小程序还是比较感兴趣的，因为在这一段时间也对微信小程序开发有所研究，所以在这片文章中会给大家简单的介绍一下微信小程序的开发，让大家有一个入门的认识。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="微信小程序开发者文档地址"><a href="#微信小程序开发者文档地址" class="headerlink" title="微信小程序开发者文档地址"></a><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/index.html" target="_blank" rel="external">微信小程序开发者文档地址</a></h2><p>这个就是微信的官方文档的地址，大家可以在这里看到一些微信的官方介绍，为了方便懒癌晚期患者，我把一些我认为重点的东西会粘贴在下面。</p>
+<h3 id="以下部分内容截取自官方文档"><a href="#以下部分内容截取自官方文档" class="headerlink" title="以下部分内容截取自官方文档"></a>以下部分内容截取自官方文档</h3><h4 id="创建微信小程序"><a href="#创建微信小程序" class="headerlink" title="创建微信小程序"></a>创建微信小程序</h4><p>因为微信小程序是基于微信的环境来开发的，所以我们需要在腾讯那边先创建一个微信小程序，才能进行接下来的操作。</p>
+<ol>
+<li><strong>获取微信小程序的 AppID</strong><br>登录 <a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a> ，就可以在网站的“设置”-“开发者设置”中，查看到微信小程序的 AppID 了，注意不可直接使用服务号或订阅号的 AppID 。<br><strong>注意</strong>：如果要以非管理员微信号在手机上体验该小程序，那么我们还需要操作“绑定开发者”。即在“用户身份”-“开发者”模块，绑定上需要体验该小程序的微信号。本教程默认注册帐号、体验都是使用管理员微信号。<br><img src="http://upload-images.jianshu.io/upload_images/1115674-9f9cfa222fd98af2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="setting"></li>
+<li><strong>创建项目</strong><br>我们需要通过开发者工具，来完成小程序创建和代码编辑。<br>开发者工具安装完成后，打开并使用微信扫码登录。选择创建“项目”，填入上文获取到的 AppID ，设置一个本地项目的名称（非小程序名称），比如“我的第一个项目”，并选择一个本地的文件夹作为代码存储的目录，点击“新建项目”就可以了。<br>为方便初学者了解微信小程序的基本代码结构，在创建过程中，如果选择的本地文件夹是个空文件夹，开发者工具会提示，是否需要创建一个 quick start 项目。选择“是”，开发者工具会帮助我们在开发目录里生成一个简单的 demo。<br><img src="http://upload-images.jianshu.io/upload_images/1115674-ced529d2888fc2d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="new_project"><br>项目创建成功后，我们就可以点击该项目，进入并看到完整的开发者工具界面，点击左侧导航，在“编辑”里可以查看和编辑我们的代码，在“调试”里可以测试代码并模拟小程序在微信客户端效果，在“项目”里可以发送到手机里预览实际效果。</li>
+<li><strong>编写代码</strong><br>####创建小程序实例<br>点击开发者工具左侧导航的“编辑”，我们可以看到这个项目，已经初始化并包含了一些简单的代码文件。最关键也是必不可少的，是 <code>app.js</code>、<code>app.json</code>、<code>app.wxss</code> 这三个。其中，<code>.js</code>后缀的是脚本文件，<code>.json</code>后缀的文件是配置文件，<code>.wxss</code>后缀的是样式表文件。微信小程序会读取这些文件，并生成<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/app.html?t=201715" target="_blank" rel="external">小程序实例</a>。<br>下面我们简单了解这三个文件的功能，方便修改以及从头开发自己的微信小程序。<br><code>app.js</code>是小程序的脚本代码。我们可以在这个文件中监听并处理小程序的生命周期函数、声明全局变量。调用框架提供的丰富的<code>API</code>，如本例的同步存储及同步读取本地数据。想了解更多可用 <code>API</code>，可参考 <a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/?t=201715" target="_blank" rel="external">API 文档</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">//app.js</div><div class="line">App(&#123;</div><div class="line">  onLaunch: function () &#123;</div><div class="line">    //调用API从本地缓存中获取数据</div><div class="line">    var logs = wx.getStorageSync(&apos;logs&apos;) || []</div><div class="line">    logs.unshift(Date.now())</div><div class="line">    wx.setStorageSync(&apos;logs&apos;, logs)</div><div class="line">  &#125;,</div><div class="line">  getUserInfo:function(cb)&#123;</div><div class="line">    var that = this;</div><div class="line">    if(this.globalData.userInfo)&#123;</div><div class="line">      typeof cb == &quot;function&quot; &amp;&amp; cb(this.globalData.userInfo)</div><div class="line">    &#125;else&#123;</div><div class="line">      //调用登录接口</div><div class="line">      wx.login(&#123;</div><div class="line">        success: function () &#123;</div><div class="line">          wx.getUserInfo(&#123;</div><div class="line">            success: function (res) &#123;</div><div class="line">              that.globalData.userInfo = res.userInfo;</div><div class="line">              typeof cb == &quot;function&quot; &amp;&amp; cb(that.globalData.userInfo)</div><div class="line">            &#125;</div><div class="line">          &#125;)</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  globalData:&#123;</div><div class="line">    userInfo:null</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><code>app.json</code> 是对整个小程序的全局配置。我们可以在这个文件中配置小程序是由哪些页面组成，配置小程序的窗口背景色，配置导航条样式，配置默认标题。注意该文件不可添加任何注释。更多可配置项可参考<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html?t=201715" target="_blank" rel="external">配置详解</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;pages&quot;:[</div><div class="line">    &quot;pages/index/index&quot;,</div><div class="line">    &quot;pages/logs/logs&quot;</div><div class="line">  ],</div><div class="line">  &quot;window&quot;:&#123;</div><div class="line">    &quot;backgroundTextStyle&quot;:&quot;light&quot;,</div><div class="line">    &quot;navigationBarBackgroundColor&quot;: &quot;#fff&quot;,</div><div class="line">    &quot;navigationBarTitleText&quot;: &quot;WeChat&quot;,</div><div class="line">    &quot;navigationBarTextStyle&quot;:&quot;black&quot;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>app.wxss</code> 是整个小程序的公共样式表。我们可以在页面组件的 <code>class</code> 属性上直接使用 <code>app.wxss</code> 中声明的样式规则。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/**app.wxss**/</div><div class="line">.container &#123;</div><div class="line">  height: 100%;</div><div class="line">  display: flex;</div><div class="line">  flex-direction: column;</div><div class="line">  align-items: center;</div><div class="line">  justify-content: space-between;</div><div class="line">  padding: 200rpx 0;</div><div class="line">  box-sizing: border-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h4><p>在这个教程里，我们有两个页面，index 页面和 logs 页面，即欢迎页和小程序启动日志的展示页，他们都在 pages 目录下。微信小程序中的每一个页面的【路径+页面名】都需要写在 app.json 的 pages 中，且 pages 中的第一个页面是小程序的首页。<br>每一个小程序页面是由同路径下同名的四个不同后缀文件的组成，如：index.js、index.wxml、index.wxss、index.json。<code>.js</code>后缀的文件是脚本文件，<code>.json</code>后缀的文件是配置文件，<code>.wxss</code>后缀的是样式表文件，<code>.wxml</code>后缀的文件是页面结构文件。</p>
+<ul>
+<li>index.wxml 是页面的结构文件：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!--index.wxml--&gt;</div><div class="line">&lt;view class=&quot;container&quot;&gt;</div><div class="line">  &lt;view  bindtap=&quot;bindViewTap&quot; class=&quot;userinfo&quot;&gt;</div><div class="line">    &lt;image class=&quot;userinfo-avatar&quot; src=&quot;&#123;&#123;userInfo.avatarUrl&#125;&#125;&quot; background-size=&quot;cover&quot;&gt;&lt;/image&gt;</div><div class="line">    &lt;text class=&quot;userinfo-nickname&quot;&gt;&#123;&#123;userInfo.nickName&#125;&#125;&lt;/text&gt;</div><div class="line">  &lt;/view&gt;</div><div class="line">  &lt;view class=&quot;usermotto&quot;&gt;</div><div class="line">    &lt;text class=&quot;user-motto&quot;&gt;&#123;&#123;motto&#125;&#125;&lt;/text&gt;</div><div class="line">  &lt;/view&gt;</div><div class="line">&lt;/view&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>本例中使用了<view>、<image>、<text>来搭建页面结构，绑定数据和交互处理函数。</text></image></view></p>
+<ul>
+<li><p>index.js 是页面的脚本文件，在这个文件中我们可以监听并处理页面的生命周期函数、获取小程序实例，声明并处理数据，响应页面交互事件等。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line">//获取应用实例</div><div class="line">var app = getApp()</div><div class="line">Page(&#123;</div><div class="line">  data: &#123;</div><div class="line">    motto: &apos;Hello World&apos;,</div><div class="line">    userInfo: &#123;&#125;</div><div class="line">  &#125;,</div><div class="line">  //事件处理函数</div><div class="line">  bindViewTap: function() &#123;</div><div class="line">    wx.navigateTo(&#123;</div><div class="line">      url: &apos;../logs/logs&apos;</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div><div class="line">  onLoad: function () &#123;</div><div class="line">    console.log(&apos;onLoad&apos;)</div><div class="line">    var that = this</div><div class="line">    //调用应用实例的方法获取全局数据</div><div class="line">    app.getUserInfo(function(userInfo)&#123;</div><div class="line">      //更新数据</div><div class="line">      that.setData(&#123;</div><div class="line">        userInfo:userInfo</div><div class="line">      &#125;)</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li>index.wxss 是页面的样式表：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">/**index.wxss**/</div><div class="line">.userinfo &#123;</div><div class="line">  display: flex;</div><div class="line">  flex-direction: column;</div><div class="line">  align-items: center;</div><div class="line">&#125;</div><div class="line">.userinfo-avatar &#123;</div><div class="line">  width: 128rpx;</div><div class="line">  height: 128rpx;</div><div class="line">  margin: 20rpx;</div><div class="line">  border-radius: 50%;</div><div class="line">&#125;</div><div class="line">.userinfo-nickname &#123;</div><div class="line">  color: #aaa;</div><div class="line">&#125;</div><div class="line">.usermotto &#123;</div><div class="line">  margin-top: 200px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>页面的样式表是非必要的。当有页面样式表时，页面的样式表中的样式规则会层叠覆盖 app.wxss 中的样式规则。如果不指定页面的样式表，也可以在页面的结构文件中直接使用 app.wxss 中指定的样式规则。</p>
+<ul>
+<li>index.json 是页面的配置文件：<br>页面的配置文件是非必要的。当有页面的配置文件时，配置项在该页面会覆盖 app.json 的 window 中相同的配置项。如果没有指定的页面配置文件，则在该页面直接使用 app.json 中的默认配置。</li>
+<li>logs 的页面结构<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;!--logs.wxml--&gt;</div><div class="line">&lt;view class=&quot;container log-list&quot;&gt;</div><div class="line">  &lt;block wx:for=&quot;&#123;&#123;logs&#125;&#125;&quot; wx:for-item=&quot;log&quot;&gt;</div><div class="line">    &lt;text class=&quot;log-item&quot;&gt;&#123;&#123;index + 1&#125;&#125;. &#123;&#123;log&#125;&#125;&lt;/text&gt;</div><div class="line">  &lt;/block&gt;</div><div class="line">&lt;/view&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>logs 页面使用 <block> 控制标签来组织代码，在 <block> 上使用 wx:for 绑定 logs 数据，并将 logs 数据循环展开节点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//logs.js</div><div class="line">var util = require(&apos;../../utils/util.js&apos;)</div><div class="line">Page(&#123;</div><div class="line">  data: &#123;</div><div class="line">    logs: []</div><div class="line">  &#125;,</div><div class="line">  onLoad: function () &#123;</div><div class="line">    this.setData(&#123;</div><div class="line">      logs: (wx.getStorageSync(&apos;logs&apos;) || []).map(function (log) &#123;</div><div class="line">        return util.formatTime(new Date(log))</div><div class="line">      &#125;)</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></block></block></p>
+<p>运行结果如下：<br><img src="http://upload-images.jianshu.io/upload_images/1115674-59f1ce11cb650618.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="start_result"></p>
+<ol>
+<li>手机预览<br>开发者工具左侧菜单栏选择”项目”，点击”预览”，扫码后即可在微信客户端中体验。<br><img src="http://upload-images.jianshu.io/upload_images/1115674-06673430ecef22fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="start_preview"></li>
+</ol>
+<hr>
+<h1 id="个人demo"><a href="#个人demo" class="headerlink" title="个人demo"></a>个人demo</h1><p><img src="http://upload-images.jianshu.io/upload_images/1115674-6df3db539d2cc31f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/360" alt="demo.png"></p>
+<ol>
+<li>构建框架<br>第一步，我们首先需要做的当然是搭建整个项目，我的这个demo的项目结构是这样子的。<br><img src="http://upload-images.jianshu.io/upload_images/1115674-760abca675b9bbb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/360" alt="project"><ul>
+<li>首先，就是创建项目时自带的三个文件，<code>app.js</code>,<code>app.json</code>,<code>app.wxss</code>，这三个文件的作用在上面已经作了介绍，在这里我就简单说说我个人的理解。<ul>
+<li><code>app.js</code>相当于程序的入口，在程序启动的时候会触发小程序声明周期的方法，如果你想要在小程序加载的时候做一些事情，比如说登陆，读取信息，可以在这里执行相关的操作。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">//app.js</div><div class="line">App(&#123;</div><div class="line">    onLaunch: function () &#123;</div><div class="line">        //调用API从本地缓存中获取数据</div><div class="line">        var logs = wx.getStorageSync(&apos;logs&apos;) || []</div><div class="line">        logs.unshift(Date.now())</div><div class="line">        wx.setStorageSync(&apos;logs&apos;, logs)</div><div class="line">    &#125;,</div><div class="line">    getUserInfo: function (cb) &#123;</div><div class="line">        var that = this</div><div class="line">        if (this.globalData.userInfo) &#123;</div><div class="line">            typeof cb == &quot;function&quot; &amp;&amp; cb(this.globalData.userInfo)</div><div class="line">        &#125; else &#123;</div><div class="line">            //调用登录接口</div><div class="line">            wx.login(&#123;</div><div class="line">                success: function () &#123;</div><div class="line">                    wx.getUserInfo(&#123;</div><div class="line">                        success: function (res) &#123;</div><div class="line">                            that.globalData.userInfo = res.userInfo</div><div class="line">                            typeof cb == &quot;function&quot; &amp;&amp; cb(that.globalData.userInfo)</div><div class="line">                        &#125;</div><div class="line">                    &#125;)</div><div class="line">                &#125;</div><div class="line">            &#125;)</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    globalData: &#123;</div><div class="line">        userInfo: null</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>来自Jimmy-简书。<br>这里我没有做处理，还是用的系统默认生成的代码。</p>
+<pre><code>* `app.json`相当于程序的配置文件，告诉程序，你需要加载哪些页面，然后tabbar的结构是怎么样的，所以如果开发工具报错提示说找不到xxx文件，你就可以来app.json里面看一下你填写的文件路径和名字有没有写错。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">/**app.json**/</div><div class="line">&#123;</div><div class="line">  &quot;tabBar&quot;: &#123;</div><div class="line">    &quot;color&quot;: &quot;#dddddd&quot;,</div><div class="line">    &quot;selectedColor&quot;: &quot;#1296db&quot;,</div><div class="line">    &quot;borderStyle&quot;: &quot;white&quot;,</div><div class="line">    &quot;backgroundColor&quot;: &quot;#ffffff&quot;,</div><div class="line">    &quot;list&quot;: [</div><div class="line">      &#123;</div><div class="line">        &quot;pagePath&quot;: &quot;pages/index/index&quot;,</div><div class="line">        &quot;text&quot;: &quot;首页&quot;,</div><div class="line">        &quot;iconPath&quot;: &quot;images/tabbar/camera.png&quot;,</div><div class="line">        &quot;selectedIconPath&quot;: &quot;images/tabbar/camera_hl.png&quot;</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        &quot;pagePath&quot;: &quot;pages/message/message&quot;,</div><div class="line">        &quot;text&quot;: &quot;消息&quot;,</div><div class="line">        &quot;iconPath&quot;: &quot;images/tabbar/bubble.png&quot;,</div><div class="line">        &quot;selectedIconPath&quot;: &quot;images/tabbar/bubble_hl.png&quot;</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        &quot;pagePath&quot;: &quot;pages/myLove/myLove&quot;,</div><div class="line">        &quot;text&quot;: &quot;收藏&quot;,</div><div class="line">        &quot;iconPath&quot;: &quot;images/tabbar/star.png&quot;,</div><div class="line">        &quot;selectedIconPath&quot;: &quot;images/tabbar/star_hl.png&quot;</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line">  &quot;pages&quot;: [</div><div class="line">    &quot;pages/index/index&quot;,</div><div class="line">    &quot;pages/logs/logs&quot;,</div><div class="line">    &quot;pages/message/message&quot;,</div><div class="line">    &quot;pages/myLove/myLove&quot;</div><div class="line">  ],</div><div class="line">  &quot;window&quot;: &#123;</div><div class="line">    &quot;backgroundTextStyle&quot;: &quot;light&quot;,</div><div class="line">    &quot;navigationBarBackgroundColor&quot;: &quot;#fff&quot;,</div><div class="line">    &quot;navigationBarTitleText&quot;: &quot;J&amp;M..&quot;,</div><div class="line">    &quot;navigationBarTextStyle&quot;: &quot;black&quot;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<pre><code>* `app.wxss`其实就是类似`.css`文件，就是小程序全局的样式表。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/**app.wxss**/</div><div class="line">.container &#123;</div><div class="line">    height: 100%;</div><div class="line">    display: flex;</div><div class="line">    flex-direction: column;</div><div class="line">    align-items: center;</div><div class="line">    justify-content: space-between;</div><div class="line">    padding: 200 rpx 0;</div><div class="line">    box-sizing: border-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>pages 文件夹就是我们需要重点关注的文件夹，里面包含着每一个模块，我建议大家按模块来新建好文件夹，然后在各自的模块做各自的事情。</li>
+<li>最上面 images 文件夹用来存放项目一些本地相关的图片（不过demo中的），当然，里面你还可以分子文件夹用来归类。<ol>
+<li>初始化小程序<br>我们需要初始化<code>tabbar</code>，还有设置各个页面的数据。<br>其实初始化<code>tabbar</code>，我们已经在<code>app.json</code>里面做了，现在来带大家回顾一下<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&quot;tabBar&quot;: &#123;</div><div class="line">    &quot;color&quot;: &quot;#dddddd&quot;,</div><div class="line">    &quot;selectedColor&quot;: &quot;#1296db&quot;,</div><div class="line">    &quot;borderStyle&quot;: &quot;white&quot;,</div><div class="line">    &quot;backgroundColor&quot;: &quot;#ffffff&quot;,</div><div class="line">    &quot;list&quot;: [</div><div class="line">      &#123;</div><div class="line">        &quot;pagePath&quot;: &quot;pages/index/index&quot;,</div><div class="line">        &quot;text&quot;: &quot;首页&quot;,</div><div class="line">        &quot;iconPath&quot;: &quot;images/tabbar/camera.png&quot;,</div><div class="line">        &quot;selectedIconPath&quot;: &quot;images/tabbar/camera_hl.png&quot;</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        &quot;pagePath&quot;: &quot;pages/message/message&quot;,</div><div class="line">        &quot;text&quot;: &quot;消息&quot;,</div><div class="line">        &quot;iconPath&quot;: &quot;images/tabbar/bubble.png&quot;,</div><div class="line">        &quot;selectedIconPath&quot;: &quot;images/tabbar/bubble_hl.png&quot;</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        &quot;pagePath&quot;: &quot;pages/myLove/myLove&quot;,</div><div class="line">        &quot;text&quot;: &quot;收藏&quot;,</div><div class="line">        &quot;iconPath&quot;: &quot;images/tabbar/star.png&quot;,</div><div class="line">        &quot;selectedIconPath&quot;: &quot;images/tabbar/star_hl.png&quot;</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<p>app.json里面的这一段代码就是初始化tabbar的，tabbar是小程序自带的一个组件。<br><strong>ps</strong>：小程序是组件化开发，就是他内部已经封装好了许多组件，比如常用的<code>button</code>，<code>label</code>，<code>icon</code>，<code>tabbar</code>他都建立了一个<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/component/?t=201715" target="_blank" rel="external">组件库</a>，这样子给我们自定义的空间就很少了，但是这样子的好处是使用简单，然后风格比较统一，就比较符合张小龙的理念。<br>设置各个页面的数据，也是在app.json里面，设置了路径，就会找到对应目录下的js文件来进行page的初始化。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&quot;pages&quot;: [</div><div class="line">  &quot;pages/index/index&quot;,</div><div class="line">  &quot;pages/logs/logs&quot;,</div><div class="line">  &quot;pages/message/message&quot;,</div><div class="line">  &quot;pages/myLove/myLove&quot;</div><div class="line">]</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>首页<br>首页我想制作的是一个混搭的界面，上面是一个简单的图片轮播器，然后中间是一个自定义的音乐播放界面，最下面的是几个按钮用来控制音乐播放器的工作的。<br>来自Jimmy-简书。</p>
+<ul>
+<li><p>图片轮播器<br>微信小程序提供了官方的组件<code>swiper</code><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/component/swiper.html?t=201715" target="_blank" rel="external">滑块视图容器</a>可以很简单地做出来一个图片轮播的效果。微信小程序也还是用的<strong>MVC</strong>为主要思想来进行相应代码逻辑功能的实现。</p>
+<ul>
+<li><p>首先是数据，类似模型，微信小程序对应模块的数据都是放在对应文件夹下的<code>.js</code>文件下的data属性来进行数据的设置。所以轮播器的数据源自然也要放在这里进行处理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Page(&#123;</div><div class="line">    data: &#123;</div><div class="line">        imgUrls: [&#123;</div><div class="line">            img: &quot;../../images/scroll/IMG_01.jpg&quot;</div><div class="line">        &#125;, &#123;</div><div class="line">            img: &quot;../../images/scroll/IMG_02.jpg&quot;</div><div class="line">        &#125;, &#123;</div><div class="line">            img: &quot;../../images/scroll/IMG_03.jpg&quot;</div><div class="line">        &#125;],</div><div class="line">        indicatorDots: true,</div><div class="line">        autoplay: true,</div><div class="line">        interval: 3000,</div><div class="line">        duration: 1000</div><div class="line">&#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>数据源弄好了，我们就要去处理View了，而View的处理是放在对应模块的<code>.wxml</code>模块处理的，这一块其实也就是相当于用h5语法的<code>.html</code>文件，我已经在代码写了相应的注释了，应该很容易看懂。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;!--view容器 --&gt;</div><div class="line">    &lt;view class=&quot;section section_gap swiper&quot;&gt;</div><div class="line">    &lt;!--swiper组件 --&gt;</div><div class="line">        &lt;swiper indicator-dots=&quot;&#123;&#123;indicatorDots&#125;&#125;&quot; vertical=&quot;&#123;&#123;vertical&#125;&#125;&quot;</div><div class="line">                autoplay=&quot;&#123;&#123;autoplay&#125;&#125;&quot; interval=&quot;&#123;&#123;interval&#125;&#125;&quot; duration=&quot;&#123;&#123;duration&#125;&#125;&quot;&gt;</div><div class="line">            &lt;!--block控制循环从data里面的imgUrls里面读取类，这个名字和data里面的要一致 --&gt;</div><div class="line">            &lt;block wx:for-items=&quot;&#123;&#123;imgUrls&#125;&#125;&quot;&gt;</div><div class="line">            &lt;!--每次循环创建一个swiper-item组件--&gt;</div><div class="line">                &lt;swiper-item&gt;</div><div class="line">                &lt;!--组件里面创建image组件，路径读取类里面的img属性--&gt;</div><div class="line">                    &lt;image src=&quot;&#123;&#123;item.img&#125;&#125;&quot; class=&quot;slide-image&quot;/&gt;</div><div class="line">                &lt;/swiper-item&gt;</div><div class="line">            &lt;/block&gt;</div><div class="line">        &lt;/swiper&gt;</div><div class="line">    &lt;/view&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>最后，我们需要处理类似Controller的功能。<br>嗯，就是不用处理，这就是组件化的好处。如果我们对组件样式没有要求，也不做图片点击的处理的话。我们就不需要做一些逻辑方面的处理，data和view来展示就够了。如果你想要加点击图片跳转的逻辑，可以在<code>.wxml</code>里面添加图片点击绑定方法，然后在<code>.js</code>里面处理对应跳转的方法逻辑。<br>来自Jimmy-简书。</p>
+</li>
+</ul>
+</li>
+<li><p>音乐播放器和进度条<br>首先，官方的音乐播放器组件的样式是酱紫的：<br><img src="http://upload-images.jianshu.io/upload_images/1115674-5add4124af703489.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="audio"><br>就是我们做的播放器的上班部分，很简单，就是调用官方的组件就可以了。<br>所以我们需要做的就是添加下面的进度条和时间，然后把他和音乐组件关联起来就可以了，这就是我们需要做的事。</p>
+<ul>
+<li><p>首先还是要处理数据，我们需要属性记录音乐播放器的播放路径，还有封面图片，名字，还有时间等要素，所以还是需要在前面data里面补充写入相关数据，因为我没有做服务器，所以目前先写死。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">data: &#123;</div><div class="line">    // 图片轮播器</div><div class="line">    imgUrls: [&#123;</div><div class="line">        img: &quot;../../images/scroll/IMG_01.jpg&quot;</div><div class="line">    &#125;, &#123;</div><div class="line">        img: &quot;../../images/scroll/IMG_02.jpg&quot;</div><div class="line">    &#125;, &#123;</div><div class="line">        img: &quot;../../images/scroll/IMG_03.jpg&quot;</div><div class="line">    &#125;</div><div class="line">    ],</div><div class="line">    indicatorDots: true,</div><div class="line">    autoplay: true,</div><div class="line">    interval: 3000,</div><div class="line">    duration: 1000,</div><div class="line"></div><div class="line">    // 音乐播放器</div><div class="line">    poster: &quot;http://d.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=abfe5f62f3f2b211f0238d1cabe90e5d/fd039245d688d43f3c52a8e3751ed21b0ef43b23.jpg&quot;,</div><div class="line">    musicSrc: &quot;http://qqma.tingge123.com:83/123/2016/10/周杰伦%20-%20告白气球.mp3&quot;,</div><div class="line">    name: &apos;告白气球&apos;,</div><div class="line">    author: &apos;周杰伦&apos;,</div><div class="line">    sliderValue: 0,</div><div class="line">    minTime: 0,</div><div class="line">    maxTime: 100,</div><div class="line">    minMin: &apos;00:00&apos;,</div><div class="line">    maxMin: &apos;00:00&apos;,</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+</li>
+<li><p>接着我们需要来处理View相关的界面。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;!--音乐播放组件--&gt;</div><div class="line">        &lt;audio poster=&quot;&#123;&#123;poster&#125;&#125;&quot; name=&quot;&#123;&#123;name&#125;&#125;&quot; author=&quot;&#123;&#123;author&#125;&#125;&quot;</div><div class="line">                src=&quot;&#123;&#123;musicSrc&#125;&#125;&quot; action=&quot;&#123;&#123;action&#125;&#125;&quot;</div><div class="line">                bindtimeupdate=&quot;bindTimeUpdate&quot; controls loop&gt;</div><div class="line">                &lt;/audio&gt;</div><div class="line">        &lt;!--进度条及时间--&gt;</div><div class="line">        &lt;view class=&quot;section section_gap&quot;&gt;</div><div class="line">            &lt;view class=&quot;body-view&quot;&gt;</div><div class="line">                &lt;!--当前时间--&gt;</div><div class="line">                &lt;view class=&quot;minTime&quot;&gt;</div><div class="line">                    &lt;text class=&quot;minMin&quot;&gt;&#123;&#123;minMin&#125;&#125;&lt;/text&gt;</div><div class="line">                &lt;/view&gt;</div><div class="line">                &lt;!--进度条--&gt;</div><div class="line">                 &lt;slider class=&quot;slider&quot; value=&quot;&#123;&#123;sliderValue&#125;&#125;&quot; bindchange=&quot;sliderChange&quot; min=&quot;&#123;&#123;minTime&#125;&#125;&quot; max=&quot;&#123;&#123;maxTime&#125;&#125;&quot;/&gt;</div><div class="line">                &lt;!--最大时间--&gt;</div><div class="line">                &lt;view class=&quot;maxTime&quot; text=&quot;&#123;&#123;minMin&#125;&#125;&quot;&gt;</div><div class="line">                    &lt;text class=&quot;maxMin&quot;&gt;&#123;&#123;maxMin&#125;&#125;&lt;/text&gt;</div><div class="line">                &lt;/view&gt;</div><div class="line">            &lt;/view&gt;</div><div class="line">        &lt;/view&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>然后是slider时间滑动条的wxss布局<br>来自Jimmy-简书。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">/*Slider*/</div><div class="line">.body-view&#123;</div><div class="line">  display: flex;</div><div class="line">  align-items: center;</div><div class="line">&#125;</div><div class="line">.slider&#123;</div><div class="line">  flex:1;</div><div class="line">&#125;</div><div class="line">.minTime&#123;</div><div class="line">  flex: 0 0 10%;</div><div class="line">  height: 25px;</div><div class="line">&#125;</div><div class="line">.maxTime&#123;</div><div class="line">  flex: 0 0 10%;</div><div class="line">  height: 25px;</div><div class="line">&#125;</div><div class="line">.minMin&#123;</div><div class="line">  font-size: 12px;</div><div class="line">&#125;</div><div class="line">.maxMin&#123;</div><div class="line">  font-size: 12px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<pre><code>* View处理完了，接下来我们就需要写类似Controller的逻辑了，这些代码我是放在`.js`文件里面处理的。
+</code></pre><p>我们在audio组件上面绑定了播放进度改变触发事件，大家可以仔细看wxml里面的代码，绑定了这些时间，当系统执行那些操作的时候，就类似代理，会自动执行我们绑定的方法。那我们是怎么样知道他可以绑定那些事件呢？我们可以看官方文档的介绍：<br><img src="http://upload-images.jianshu.io/upload_images/1115674-2e16b035a7820719.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="bindTpye"><br>以上是我从audio官方截取下来的audio官方支持绑定的事件，我们只需要在wxml里面的组件里面的属性带上这些，然后在后面执行方法，就可以绑定事件了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;audio poster=&quot;&#123;&#123;poster&#125;&#125;&quot; name=&quot;&#123;&#123;name&#125;&#125;&quot; author=&quot;&#123;&#123;author&#125;&#125;&quot; src=&quot;&#123;&#123;musicSrc&#125;&#125;&quot; action=&quot;&#123;&#123;action&#125;&#125;&quot; </div><div class="line">bindtimeupdate=&quot;bindTimeUpdate&quot; controls loop&gt;&lt;/audio&gt;</div></pre></td></tr></table></figure></p>
+<p>绑定完事件，就可以在<code>.js</code>文件处理逻辑了。与data平级，添加事件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">bindTimeUpdate: function (audio) &#123;</div><div class="line">       // 通过audio的属性秒数计算当前分钟和秒数</div><div class="line">       let currentMin = Math.floor(audio.detail.currentTime / 60);</div><div class="line">       var currentSec = Math.floor(audio.detail.currentTime % 60);</div><div class="line">       // 异常处理</div><div class="line">       if (currentSec &lt; 10) &#123;</div><div class="line">           currentSec = &quot;0&quot; + currentSec;</div><div class="line">       &#125;</div><div class="line">       if (currentMin &lt; 10) &#123;</div><div class="line">           currentMin = &quot;0&quot; + currentMin;</div><div class="line">       &#125;</div><div class="line">       // 拼接</div><div class="line">       var currentTime = currentMin + &quot;:&quot; + currentSec;</div><div class="line"></div><div class="line">       let maxMin = Math.floor(audio.detail.duration / 60);</div><div class="line">       var maxSec = Math.floor(audio.detail.duration % 60);</div><div class="line"></div><div class="line">       if (maxSec &lt; 10) &#123;</div><div class="line">           maxSec = &quot;0&quot; + maxSec;</div><div class="line">       &#125;</div><div class="line">       if (maxMin &lt; 10) &#123;</div><div class="line">           maxMin = &quot;0&quot; + maxMin;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       var maxTime = maxMin + &quot;:&quot; + maxSec;</div><div class="line">       // 重新赋值data，然后小程序就会根据data读取数据，自动更新UI</div><div class="line">       this.setData(&#123;</div><div class="line">           minMin: currentTime,</div><div class="line">           maxMin: maxTime,</div><div class="line">           sliderValue: audio.detail.currentTime,</div><div class="line">           maxTime: audio.detail.duration</div><div class="line">       &#125;)</div><div class="line">   &#125;,</div></pre></td></tr></table></figure></p>
+<p>这样子就可以当音乐播放的时候自动显示当前时间和最大时间，而且进度条会自动前进，可是还有一个小问题，当我们拖动进度条的时候，不能继续在我们拖动的地方进行播放。所以就要处理slider的绑定事件了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;slider class=&quot;slider&quot; value=&quot;&#123;&#123;sliderValue&#125;&#125;&quot; bindchange=&quot;sliderChange&quot; min=&quot;&#123;&#123;minTime&#125;&#125;&quot; max=&quot;&#123;&#123;maxTime&#125;&#125;&quot;/&gt;</div></pre></td></tr></table></figure></p>
+<p>我在slider上也绑定了一个事件，只需要写入下面的代码就可以执行拖动更新事件了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">sliderChange: function (slider) &#123;</div><div class="line">    this.audio14(slider.detail.value);</div><div class="line">&#125;,</div><div class="line">audio14: function (time) &#123;</div><div class="line">    this.setData(&#123;</div><div class="line">        action: &#123;</div><div class="line">            method: &apos;setCurrentTime&apos;,</div><div class="line">            data: time</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<p>至此，自定义音乐播放器已经完成。<br>来自Jimmy-简书。<br><img src="http://upload-images.jianshu.io/upload_images/1115674-125ebc5147767b5b.gif?imageMogr2/auto-orient/strip" alt="audio"></p>
+<ul>
+<li>控制音乐播放器的按钮<br>其实这一步的东西属于未完成，因为只是个人构想，还没有成熟的UI，没有把这些东西整合到音乐播放器里面，只是写了简单的实现，所以现在来跟大家分享一下，因为比较简单，所以我只贴代码了。相信大家听我啰嗦了这么久，一定能看懂了。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;!--index.wxml--&gt;</div><div class="line">    &lt;button type=&quot;primary&quot; bindtap=&quot;audioPlay&quot;&gt;播放&lt;/button&gt;</div><div class="line">    &lt;button type=&quot;primary&quot; bindtap=&quot;audioPause&quot;&gt;暂停&lt;/button&gt;</div><div class="line">    &lt;button type=&quot;primary&quot; bindtap=&quot;audioPlaybackRateSpeedUp&quot;&gt;调为2倍速&lt;/button&gt;</div><div class="line">    &lt;button type=&quot;primary&quot; bindtap=&quot;audioPlaybackRateNormal&quot;&gt;调为1倍速&lt;/button&gt;</div><div class="line">    &lt;button type=&quot;primary&quot; bindtap=&quot;audioPlaybackRateSlowDown&quot;&gt;调为0.5倍速&lt;/button&gt;</div><div class="line">    &lt;button type=&quot;primary&quot; bindtap=&quot;audioNext&quot;&gt;下一曲&lt;/button&gt;</div><div class="line">    &lt;button type=&quot;primary&quot; bindtap=&quot;audioStart&quot;&gt;回到开头&lt;/button&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line">audioPlay: function () &#123;</div><div class="line">        this.setData(&#123;</div><div class="line">            action: &#123;</div><div class="line">                method: &apos;play&apos;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div><div class="line">    audioPause: function () &#123;</div><div class="line">        this.setData(&#123;</div><div class="line">            action: &#123;</div><div class="line">                method: &apos;pause&apos;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div><div class="line">    audioPlaybackRateSpeedUp: function () &#123;</div><div class="line">        this.setData(&#123;</div><div class="line">            action: &#123;</div><div class="line">                method: &apos;setPlaybackRate&apos;,</div><div class="line">                data: 2</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div><div class="line">    audioPlaybackRateNormal: function () &#123;</div><div class="line">        this.setData(&#123;</div><div class="line">            action: &#123;</div><div class="line">                method: &apos;setPlaybackRate&apos;,</div><div class="line">                data: 1</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div><div class="line">    audioPlaybackRateSlowDown: function () &#123;</div><div class="line">        this.setData(&#123;</div><div class="line">            action: &#123;</div><div class="line">                method: &apos;setPlaybackRate&apos;,</div><div class="line">                data: 0.5</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div><div class="line">        audioNext: function () &#123;</div><div class="line">        this.setData(&#123;</div><div class="line">            action: &#123;</div><div class="line">                method: &apos;pause&apos;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div><div class="line">    audioStart: function () &#123;</div><div class="line">        this.setData(&#123;</div><div class="line">            action: &#123;</div><div class="line">                method: &apos;setCurrentTime&apos;,</div><div class="line">                data: 0</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div></pre></td></tr></table></figure>
+<p>至此，首页全部完成。<br>来自Jimmy-简书。</p>
+<ol>
+<li>消息页面<br>消息页面我还没有彻底完成，只是一个构想，这个做的比较不一样的一步就是获取用户信息了。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;view  bindtap=&quot;bindViewTap&quot; class=&quot;userinfo&quot;&gt;</div><div class="line">  &lt;image class=&quot;userinfo-avatar&quot; src=&quot;&#123;&#123;userInfo.avatarUrl&#125;&#125;&quot; background-size=&quot;cover&quot;&gt;&lt;/image&gt;</div><div class="line">  &lt;text class=&quot;userinfo-nickname&quot;&gt;&#123;&#123;userInfo.nickName&#125;&#125;&lt;/text&gt;</div><div class="line">&lt;/view&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>view里面绑定了点击事件，用来跳转页面，然后头像的路径用全局的userInfo读取<code>userInfo.avatarUrl</code>属性，名字读取<code>userInfo.nickName</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//index.js</div><div class="line"> onLoad: function () &#123;</div><div class="line">    console.log(&apos;onLoad&apos;)</div><div class="line">    var that = this</div><div class="line">    //调用应用实例的方法获取全局数据</div><div class="line">    app.getUserInfo(function(userInfo)&#123;</div><div class="line">      //更新数据</div><div class="line">      that.setData(&#123;</div><div class="line">        userInfo:userInfo</div><div class="line">      &#125;)</div><div class="line">    &#125;)</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>然后在一开始登陆自动生成的app.js代码，给我们做了用户信息的读取，带大家回顾一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">//app.js</div><div class="line">App(&#123;</div><div class="line">    onLaunch: function () &#123;</div><div class="line">        //调用API从本地缓存中获取数据</div><div class="line">        var logs = wx.getStorageSync(&apos;logs&apos;) || []</div><div class="line">        logs.unshift(Date.now())</div><div class="line">        wx.setStorageSync(&apos;logs&apos;, logs)</div><div class="line">    &#125;,</div><div class="line">    getUserInfo: function (cb) &#123;</div><div class="line">        var that = this</div><div class="line">        if (this.globalData.userInfo) &#123;</div><div class="line">            typeof cb == &quot;function&quot; &amp;&amp; cb(this.globalData.userInfo)</div><div class="line">        &#125; else &#123;</div><div class="line">            //调用登录接口</div><div class="line">            wx.login(&#123;</div><div class="line">                success: function () &#123;</div><div class="line">                    wx.getUserInfo(&#123;</div><div class="line">                        success: function (res) &#123;</div><div class="line">                            that.globalData.userInfo = res.userInfo</div><div class="line">                            typeof cb == &quot;function&quot; &amp;&amp; cb(that.globalData.userInfo)</div><div class="line">                        &#125;</div><div class="line">                    &#125;)</div><div class="line">                &#125;</div><div class="line">            &#125;)</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    globalData: &#123;</div><div class="line">        userInfo: null</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>然后处理的是点击头像跳转页面事件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//跳转事件处理函数</div><div class="line">bindViewTap: function() &#123;</div><div class="line">  wx.navigateTo(&#123;</div><div class="line">    url: &apos;../logs/logs&apos;</div><div class="line">  &#125;)</div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<p>然后这个简单的微信小程序demo已经完成，然后第一次写微信小程序的开发文章，如果有什么遗漏的地方，欢迎大家跟帖补充，谢谢。</p>
+<hr>
+<h2 id="最后-再来一遍github-Demo地址-๑•̀ㅂ•́-و✧"><a href="#最后-再来一遍github-Demo地址-๑•̀ㅂ•́-و✧" class="headerlink" title="最后 再来一遍github Demo地址 (๑•̀ㅂ•́)و✧"></a>最后 再来一遍github Demo地址 (๑•̀ㅂ•́)و✧</h2><p><a href="https://github.com/JimmyPeng4iOS/WxDemo" target="_blank" rel="external">https://github.com/JimmyPeng4iOS/WxDemo</a></p>
+<h2 id="转载请注明出处-谢谢-～-o-～-Y-1"><a href="#转载请注明出处-谢谢-～-o-～-Y-1" class="headerlink" title="转载请注明出处, 谢谢! (～ o ～)Y"></a>转载请注明出处, 谢谢! (～ o ～)Y</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/wx/" rel="tag">#wx</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/05/video/" rel="next" title="视频的录制、截图和压缩">
+                <i class="fa fa-chevron-left"></i> 视频的录制、截图和压缩
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/09/wx/"
+           data-title="微信小程序开发 入门介绍 及个人demo" data-url="http://jimmypeng.cn/2017/01/09/wx/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://upload.jianshu.io/users/upload_avatars/1115674/6322d5678682.jpg"
+               alt="Jimmy Peng" />
+          <p class="site-author-name" itemprop="name">Jimmy Peng</p>
+          <p class="site-description motion-element" itemprop="description">渊深常得蛟龙在，梧高自有凤凰栖。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/JimmyPeng4iOS" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.weibo.com/JimmyPeng4iOS" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/users/53845c6b43dc/top_articles" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#转载请注明出处-谢谢-～-o-～-Y"><span class="nav-number">1.</span> <span class="nav-text">转载请注明出处, 谢谢! (～ o ～)Y</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序开发者文档地址"><span class="nav-number">3.</span> <span class="nav-text">微信小程序开发者文档地址</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#以下部分内容截取自官方文档"><span class="nav-number">3.1.</span> <span class="nav-text">以下部分内容截取自官方文档</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建微信小程序"><span class="nav-number">3.1.1.</span> <span class="nav-text">创建微信小程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建页面"><span class="nav-number">3.1.2.</span> <span class="nav-text">创建页面</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个人demo"><span class="nav-number"></span> <span class="nav-text">个人demo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#最后-再来一遍github-Demo地址-๑•̀ㅂ•́-و✧"><span class="nav-number">1.</span> <span class="nav-text">最后 再来一遍github Demo地址 (๑•̀ㅂ•́)و✧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转载请注明出处-谢谢-～-o-～-Y-1"><span class="nav-number">2.</span> <span class="nav-text">转载请注明出处, 谢谢! (～ o ～)Y</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2010 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jimmy Peng</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jimmyp"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
